@@ -10,7 +10,7 @@
 import { ref, computed } from "vue";
 import dynamicImport from "./utils/dynamicImport";
 
-const selectedTemplate = ref("template2");
+const selectedTemplate = ref("template1");
 const currentComponent = computed(() => {
   return dynamicImport(selectedTemplate.value);
 });

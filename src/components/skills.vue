@@ -7,11 +7,9 @@
         <h2 class="group-title">核心技术栈</h2>
         <div class="skill-content">
           <p>
-            <span class="label">框架与库</span>：精通 <strong>Vue 2/3</strong> 全家桶 (<strong
-              >Vue Router, Pinia, VitePress</strong
-            >)；熟练使用 <strong>React, Next.js</strong> 及其生态 (<strong
-              >Hooks, Router, ahooks, Zustand, MobX</strong
-            >)。
+            <span class="label">框架与库</span>：精通 <strong>Vue 2/3</strong> 全家桶 (<strong>Vue Router, Pinia,
+              VitePress</strong>)；熟练使用 <strong>React, Next.js</strong> 及其生态 (<strong>Hooks, Router, ahooks, Zustand,
+              MobX</strong>)。
           </p>
           <p>
             <span class="label">语言与基建</span>：深厚的 <strong>ES6+、TypeScript</strong>
@@ -26,8 +24,7 @@
           </p>
           <p>
             <span class="label">数据可视化</span>：精通
-            <strong>ECharts、Canvas、AntV (G2/X6/G6)</strong
-            >，拥有丰富的大屏交互与复杂拓扑图开发经验；掌握基于
+            <strong>ECharts、Canvas、AntV (G2/X6/G6)</strong>，拥有丰富的大屏交互与复杂拓扑图开发经验；掌握基于
             <strong>ResizeObserver</strong> 的大屏自适应适配方案。
           </p>
         </div>
@@ -67,15 +64,14 @@
             <strong>HarmonyOS NEXT</strong> 实际项目实践经验。
           </p>
           <p>
-            <span class="label">AI 赋能</span>：深入应用主流 LLM (<strong>ChatGPT, DeepSeek</strong
-            >) API 与 <strong>MCP</strong> 协议；熟练编写
+            <span class="label">AI 赋能</span>：深入应用主流 LLM (<strong>ChatGPT, DeepSeek</strong>) API 与 <strong>MCP</strong>
+            协议；熟练编写
             <strong>Agent Rules</strong> 辅助日常编码、自动化工具开发及复杂问题排查。
           </p>
 
           <p>
-            <span class="label">后端技术</span>：熟悉 <strong>Node.js</strong> 常用框架 (<strong
-              >Nest, Koa, Express</strong
-            >)；掌握 <strong>MySQL, Redis</strong> 的基本应用。
+            <span class="label">后端技术</span>：熟悉 <strong>Node.js</strong> 常用框架 (<strong>Nest, Koa, Express</strong>)；掌握
+            <strong>MySQL, Redis</strong> 的基本应用。
           </p>
         </div>
       </div>
@@ -84,81 +80,82 @@
 </template>
 
 <style lang="scss" scoped>
-  .skills {
-    margin-top: 28px;
-    page-break-inside: auto;
+.skills {
+  padding-top: 5px;
+  page-break-inside: auto;
 
-    .title {
-      font-size: 22px;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #3498db;
-      color: #2c3e50;
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  .skill-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .skill-group {
+    .group-title {
+      font-size: 18px;
+      color: #3498db;
+      margin: 0 0 8px 0;
       font-weight: 600;
-    }
-
-    .skill-groups {
       display: flex;
-      flex-direction: column;
-      gap: 16px;
+      align-items: center;
+
+      &::before {
+        content: '';
+        width: 4px;
+        height: 16px;
+        background-color: #3498db;
+        margin-right: 8px;
+        border-radius: 2px;
+      }
     }
 
-    .skill-group {
-      .group-title {
+    .skill-content {
+      padding-left: 12px;
+
+      p {
+        margin: 4px 0;
         font-size: 16px;
-        color: #3498db;
-        margin: 0 0 8px 0;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
+        color: #57606f;
+        line-height: 1.7;
 
-        &::before {
-          content: '';
-          width: 4px;
-          height: 14px;
-          background-color: #3498db;
-          margin-right: 8px;
-          border-radius: 2px;
+        .label {
+          color: #2c3e50;
+          font-weight: 600;
         }
-      }
 
-      .skill-content {
-        padding-left: 12px;
-
-        p {
-          margin: 4px 0;
-          font-size: 14.5px;
-          color: #57606f;
-          line-height: 1.7;
-
-          .label {
-            color: #2c3e50;
-            font-weight: 600;
-          }
-
-          strong {
-            color: #3498db;
-            /* 使用统一蓝色高亮技术栈 */
-            font-weight: 700;
-            padding: 0 2px;
-            margin: 0;
-          }
+        strong {
+          color: #3498db;
+          /* 使用统一蓝色高亮技术栈 */
+          font-weight: 700;
+          padding: 0 2px;
+          margin: 0;
         }
       }
     }
   }
+}
 
-  @media print {
-    .skill-group {
-      break-inside: avoid;
-      page-break-inside: avoid;
-      
-      strong {
-        color: #3498db !important;
-        /* 打印时确保清晰 */
-        border-bottom: 1px solid rgba(52, 152, 219, 0.2);
-        /* 增加微妙的下划线强调 */
-      }
+@media print {
+  .skill-group {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 20px;
+
+    strong {
+      color: #3498db !important;
+      /* 打印时确保清晰 */
+      border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+      /* 增加微妙的下划线强调 */
     }
   }
+}
 </style>

@@ -6,10 +6,10 @@
     <div class="company">
       <div class="company-name">北京深睿医疗科技有限公司 ( 2024年12月 ~ 2025年10月 )</div>
       <div class="company-duty">
-        <div class="left">
-          <p>工作内容：</p>
+        <div class="label">
+          工作内容
         </div>
-        <div class="right">
+        <div class="content">
           <p>
             <span class="circle">·</span>从 0 到 1 搭建基础设施，完成
             <strong>Vue Router、CI/CD 流水线、Docker 容器化、Kubernetes 部署</strong>
@@ -26,9 +26,8 @@
             提供节点高亮、路径追踪等交互，辅助数据关系理解与溯源。
           </p>
           <p>
-            <span class="circle">·</span>对开源框架
-            <strong>Dify</strong> 进行二次开发，落地 AI 智能问答与对话模块，
-            支持知识库检索、意图识别与多轮会话，提升业务协作效率。
+            <span class="circle">·</span>对开源框架 <strong>Dify</strong> 进行二次开发，落地 AI
+            智能问答与对话模块， 支持知识库检索、意图识别与多轮会话，提升业务协作效率。
           </p>
           <p>
             <span class="circle">·</span>建设
@@ -37,9 +36,8 @@
             支持联动与按需加载，保障复杂场景的性能与一致性。
           </p>
           <p>
-            <span class="circle">·</span>主导工程性能优化：优化构建流程与打包策略，编译时间降低至原来的
-            <strong>50%</strong>； 自研图片预加载 Vite
-            插件，基于文件大小与优先级的动态加载策略，使首屏加载时间降低约
+            <span class="circle">·</span>主导工程性能优化：优化构建流程与打包策略，编译时间降低至原来的 <strong>50%</strong>；
+            自研图片预加载 Vite 插件，基于文件大小与优先级的动态加载策略，使首屏加载时间降低约
             <strong>40%</strong>。
           </p>
           <p>
@@ -62,10 +60,10 @@
           <div class="skill">SSO单点登录</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               面向医疗机构的数据资产管理与知识可视化平台，聚焦<strong>医学/疾病知识图谱、表结构映射、字段标准化</strong>等场景。
               支持多家医院异构数据表的<strong>兼容与对齐</strong>，将底层数据统一抽象为标准字段模型，并通过图表与图谱联动
@@ -74,10 +72,10 @@
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>负责前端架构设计与工程治理，搭建业务组件与图表组件体系，推动页面开发、数据联动与接口对接的规范化落地。
             </p>
@@ -96,8 +94,7 @@
               结合操作审计策略，提升敏感数据的可控性与合规性。
             </p>
             <p>
-              <span class="circle">·</span>集成第三方
-              <strong>OA</strong> 系统，支持免登录单点接入与
+              <span class="circle">·</span>集成第三方 <strong>OA</strong> 系统，支持免登录单点接入与
               <strong>iframe</strong> 无缝嵌入，
               完成跨系统菜单跳转与权限透传，优化一体化门户的使用体验。
             </p>
@@ -118,10 +115,10 @@
           <div class="skill">Kubernetes</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               面向医院与区域卫生监管的病种监测与分析平台，支持按<strong>病种、地区、时间、机构</strong>等多维度进行数据汇总与钻取，
               通过可视化看板呈现分布趋势、异常波动和结构占比，辅助管理者进行诊疗结构优化与资源调配决策。
@@ -129,10 +126,10 @@
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>负责<strong>登录鉴权、角色权限、用户信息</strong>等核心模块设计与实现，
               基于路由守卫与权限指令实现页面与功能级访问控制，提升系统安全性与可维护性。
@@ -182,10 +179,10 @@
           <div class="skill">CI/CD</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               面向医疗监管场景的综合统计与分析平台，覆盖<strong>地区、医院、科室、医生、药品</strong>等维度的数据采集、监测与可视化分析。
               通过高并发请求调度与增量渲染技术，实现大规模数据的平滑加载和交互；结合图表与表格联动，为数据稽核与趋势研判提供决策支持。
@@ -193,14 +190,13 @@
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>实现<strong>并发请求调度</strong>，通过任务队列与限流策略将同时请求数限制为
-              <strong>4</strong>，
-              在保障接口稳定性的同时提升数据拉取效率（平均列表加载时延降低约
+              <strong>4</strong>， 在保障接口稳定性的同时提升数据拉取效率（平均列表加载时延降低约
               <strong>35%</strong>）。
             </p>
             <p>
@@ -209,8 +205,7 @@
               明显降低主线程阻塞，提升页面滚动与交互流畅度（长列表掉帧问题显著缓解）。
             </p>
             <p>
-              <span class="circle">·</span>二次封装
-              <strong>vxe-table</strong>，实现<strong>滚动加载 + 虚拟滚动</strong>，
+              <span class="circle">·</span>二次封装 <strong>vxe-table</strong>，实现<strong>滚动加载 + 虚拟滚动</strong>，
               支持十万级数据在弱网与中端设备上的稳定渲染与交互。
             </p>
             <p>
@@ -232,10 +227,10 @@
     <div class="company">
       <div class="company-name">杭州宝贝派健康科技( 2023 年 2 月 ~ 2024 年 11 月 )</div>
       <div class="company-duty">
-        <div class="left">
-          <p>工作内容：</p>
+        <div class="label">
+          工作内容
         </div>
-        <div class="right">
+        <div class="content">
           <p>
             <span class="circle">·</span>主导多端项目的架构与交付，涵盖 Web
             管理后台与微信/支付宝小程序；完善代码规范与组件复用策略，提升团队交付效率与一致性。
@@ -248,18 +243,17 @@
             实践小程序工程化，成功交付多款高质量小程序产品。
           </p>
           <p>
-            <span class="circle">·</span>优化工程性能与体验：从 webpack3 升级到
-            4，启动时间由 <strong>10s</strong> 缩短至 <strong>4s</strong>，包体由
-            <strong>20MB</strong> 降至 <strong>15MB</strong>；引入 html2canvas 实现 HTML
-            转画布并统一兼容策略，提升渲染一致性。
+            <span class="circle">·</span>优化工程性能与体验：从 webpack3 升级到 4，启动时间由
+            <strong>10s</strong> 缩短至 <strong>4s</strong>，包体由 <strong>20MB</strong> 降至
+            <strong>15MB</strong>；引入 html2canvas 实现 HTML 转画布并统一兼容策略，提升渲染一致性。
           </p>
           <p>
             <span class="circle">·</span>落地 AI 赋能开发：熟练使用 ChatGPT
             与国内大模型，显著提升研发效率与文档产出质量。
           </p>
           <p>
-            <span class="circle">·</span>基于 Vue 2/3 技术栈搭建并优化后台管理系统与高性能
-            H5 应用，完善路由、状态与接口规范。
+            <span class="circle">·</span>基于 Vue 2/3 技术栈搭建并优化后台管理系统与高性能 H5
+            应用，完善路由、状态与接口规范。
           </p>
           <p>
             <span class="circle">·</span>封装并应用 TipTap
@@ -283,20 +277,20 @@
           <div class="skill">GitLab</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               部门级核心管理系统，负责统一的身份/页面/操作权限治理；前端以大量表格、表单与树形结构的数据展示为主，支撑高频配置与运营场景。
             </p>
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>从 0 到 1 搭建后台基础能力，完成动态路由
               <strong>addRoute</strong> 与配置化组件体系建设。
@@ -318,8 +312,7 @@
             </p>
             <p>
               <span class="circle">·</span>对接 <strong>ChatGPT</strong> 与
-              <strong>Midjourney</strong>，实现 AI 询问与 AI
-              绘图相关功能，提升内容配置效率。
+              <strong>Midjourney</strong>，实现 AI 询问与 AI 绘图相关功能，提升内容配置效率。
             </p>
             <p>
               <span class="circle">·</span>优化后台启动性能：基于
@@ -343,27 +336,27 @@
           <div class="skill">GitLab</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               面向孕妈与宝妈群体的小程序产品，负责项目从搭建到持续迭代与维护，并沉淀公共组件能力，保障高频营销与运营活动的快速上线。
             </p>
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>从 0 到 1
               完成核心功能：注册登录、无感刷新、个人信息等模块搭建与联调。
             </p>
             <p>
-              <span class="circle">·</span>性能优化：页面平均响应由
-              <strong>2s</strong> 降至 <strong>500ms</strong>，明显提升流畅度与稳定性。
+              <span class="circle">·</span>性能优化：页面平均响应由 <strong>2s</strong> 降至
+              <strong>500ms</strong>，明显提升流畅度与稳定性。
             </p>
             <p>
               <span class="circle">·</span>封装
@@ -380,8 +373,8 @@
             </p>
             <p>
               <span class="circle">·</span>难点攻关：原生
-              <strong>Canvas</strong> 封装分享海报与二维码功能，兼容微信/支付宝在
-              Android/iOS 的差异。
+              <strong>Canvas</strong> 封装分享海报与二维码功能，兼容微信/支付宝在 Android/iOS
+              的差异。
             </p>
           </div>
         </div>
@@ -399,44 +392,43 @@
           <div class="skill">dumi</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               面向医院场景的业务后台，支撑医生/护士对婴儿档案、测评与随访数据的登记与管理，要求高稳定性与清晰的操作流程。
             </p>
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>使用
               <strong>pnpm</strong> 管理多包与基础能力封装，提升依赖安装与构建效率。
             </p>
             <p>
-              <span class="circle">·</span>将发版流程接入 CI：自动化测试 + 线上站点发布 +
-              npm 发包，形成标准化交付。
+              <span class="circle">·</span>将发版流程接入 CI：自动化测试 + 线上站点发布 + npm
+              发包，形成标准化交付。
             </p>
             <p>
               <span class="circle">·</span>基于 <strong>husky</strong> 落地 git
               hooks，在提交前执行格式化、检查与单测，保障代码质量。
             </p>
             <p>
-              <span class="circle">·</span>利用 TypeScript 类型定义，提升 Hooks
-              的可靠性；配合 <strong>gulp</strong> 构建完善的 d.ts。
+              <span class="circle">·</span>利用 TypeScript 类型定义，提升 Hooks 的可靠性；配合
+              <strong>gulp</strong> 构建完善的 d.ts。
             </p>
             <p>
-              <span class="circle">·</span>使用 <strong>dumi</strong> 搭建组件/Hook
-              文档站，提供完整 demo 与入参/出参说明。
+              <span class="circle">·</span>使用 <strong>dumi</strong> 搭建组件/Hook 文档站，提供完整
+              demo 与入参/出参说明。
             </p>
             <p>
-              <span class="circle">·</span>难点：通过
-              <strong>gulp</strong> 同构构建同时产出 CommonJS/ESM，配合
-              <strong>webpack</strong> 提供 UMD 版本。
+              <span class="circle">·</span>难点：通过 <strong>gulp</strong> 同构构建同时产出
+              CommonJS/ESM，配合 <strong>webpack</strong> 提供 UMD 版本。
             </p>
           </div>
         </div>
@@ -447,17 +439,12 @@
     <div class="company">
       <div class="company-name">杭州风尚科技( 2022 年 9 月 ~ 2023 年 2 月 )</div>
       <div class="company-duty">
-        <div class="left">
-          <p>工作内容：</p>
+        <div class="label">
+          工作内容
         </div>
-        <div class="right">
-          <p>
-            <span class="circle">·</span>团队负责人（
-            3人），主导公司全部前端工作，任务分配；
-          </p>
-          <p>
-            <span class="circle">·</span>负责旧项目的页面开发和维护，样式更正，BUG修复；
-          </p>
+        <div class="content">
+          <p><span class="circle">·</span>团队负责人（ 3人），主导公司全部前端工作，任务分配；</p>
+          <p><span class="circle">·</span>负责旧项目的页面开发和维护，样式更正，BUG修复；</p>
           <p>
             <span class="circle">·</span>
             负责新项目的搭建，基础设施建设，技术调研及选型，页面开发和维护，书写相关文档；
@@ -475,8 +462,7 @@
           </p>
           <p>
             <span class="circle">·</span>采用 <strong>crypto-js</strong> 库实现了 AES_CBC
-            加密算法，同时针对 unix时间戳
-            进行了灵活高效的格式转换，增强了系统数据的安全性和可 靠性
+            加密算法，同时针对 unix时间戳 进行了灵活高效的格式转换，增强了系统数据的安全性和可 靠性
           </p>
           <p>
             <span class="circle">·</span>精通微信登录授权流程，成功解决了
@@ -502,40 +488,35 @@
           <div class="skill">websocket</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               一个健身房的活动配置系统，对运营和门店的活动进行管理，配置不同门店，不同城市生成不同的活动，并进行数据统计。
             </p>
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>通过 <strong>vue-cli</strong> ，结合<strong>eslint + prettier + husky +
                 lint-staged + commitlint </strong>搭建现代化前端工程，通过 css 变量配置一键换肤；
             </p>
             <p>
               <span class="circle">·</span>二次封装<strong>axios</strong>，
-              通过配置请求，响应拦截器，统一处理接口返回结果，添加全局的
-              loading，message；
+              通过配置请求，响应拦截器，统一处理接口返回结果，添加全局的 loading，message；
             </p>
             <p>
               <span class="circle">·</span>通过
               <strong> EChars </strong>实现数据可视化以及地图部分的需求；
             </p>
+            <p><span class="circle">·</span>通过 <strong> vite-press </strong>搭建运营帮助文档；</p>
             <p>
-              <span class="circle">·</span>通过
-              <strong> vite-press </strong>搭建运营帮助文档；
-            </p>
-            <p>
-              <span class="circle">·</span>通过
-              <strong> websocket </strong>实时展示现场的告警信息；
+              <span class="circle">·</span>通过 <strong> websocket </strong>实时展示现场的告警信息；
             </p>
             <p>
               <span class="circle">·</span>通过
@@ -569,10 +550,10 @@
           <div class="skill">html2canvas</div>
         </div>
         <div class="project-info">
-          <div class="left">
-            <p>项目简介：</p>
+          <div class="label">
+            项目简介
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               本项目是一个关于美容院活动的推广，此项目是和微信相关联的一个推广项目，在项目中使用背景音乐，自动滚
               动，图片下载，弹幕等功能
@@ -580,10 +561,10 @@
           </div>
         </div>
         <div class="project-my">
-          <div class="left">
-            <p>我负责的：</p>
+          <div class="label">
+            我负责的
           </div>
-          <div class="right">
+          <div class="content">
             <p>
               <span class="circle">·</span>通过
               <strong>vue-seamless-scroll</strong> 插件解决自动滚动的问题
@@ -599,8 +580,7 @@
               <strong> nginx </strong>代理接口解决跨域和微信分享带参数问题等
             </p>
             <p>
-              <span class="circle">·</span>使用<strong> vue-baberrage </strong>解决页面弹幕的问题，实现弹幕播放，视频在苹果中黑屏问题等网页设计 分析判断
-              JS 网页
+              <span class="circle">·</span>使用<strong> vue-baberrage </strong>解决页面弹幕的问题，实现弹幕播放，视频在苹果中黑屏问题等网页设计 分析判断 JS 网页
             </p>
             <p>
               <span class="circle">·</span>使用
@@ -617,78 +597,171 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
 <style lang="scss" scoped>
 .company-project {
-  margin-top: 36px;
+  padding-top: 28px;
+  page-break-inside: auto;
 
   .title {
-    font-size: 25px;
-    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+    color: #2c3e50;
+    font-weight: 600;
   }
 
   p {
-    color: #666;
-    margin: 8px 0;
-    line-height: 1.5em;
+    margin: 4px 0;
+    font-size: 16px;
+    color: #57606f;
+    line-height: 1.7;
+    text-align: justify;
+    text-justify: inter-ideograph;
     position: relative;
+    word-break: break-all;
   }
 
   .company {
+    margin-bottom: 24px;
+    page-break-inside: auto;
+
     .company-name {
-      font-size: 20px;
-      color: #00665f;
-      font-weight: bolder;
-      margin: 8px 0;
+      font-size: 18.5px;
+      color: #2c3e50;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
     .company-duty {
+      margin-bottom: 10px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
 
-      .left {}
+      .label {
+        min-width: 70px;
+        font-weight: 600;
+        color: #34495e;
+        font-size: 16.5px;
 
-      .right {
+        &::after {
+          content: '：';
+        }
+      }
+
+      .content {
         flex: 1;
+        color: #57606f;
+        font-size: 16px;
+        text-align: justify;
+
+        p {
+          margin: 4px 0;
+          line-height: 1.6;
+          position: relative;
+          padding-left: 14px; // 为圆点留出位置
+
+          .circle {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #3498db;
+            font-weight: bold;
+          }
+        }
       }
     }
 
     .job {
+      margin-bottom: 20px;
+      page-break-inside: auto;
+
       .job-name {
         font-size: 18px;
-        font-weight: bold;
-        margin: 8px 0;
-        color: #469d34;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 6px;
       }
 
       .skill-list {
         display: flex;
-        justify-content: flex-start;
         flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 10px;
 
         .skill {
-          padding: 5px 10px;
-          background-color: rgba(27, 31, 35, 0.05);
-          margin: 10px 10px 5px 0;
-          color: #333;
+          padding: 2px 8px;
+          background-color: rgba(52, 152, 219, 0.08);
+          border: 1px solid rgba(52, 152, 219, 0.12);
+          color: #3498db;
           border-radius: 4px;
           font-size: 13px;
+          font-weight: 500;
         }
       }
 
       .project-info,
       .project-my {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        margin-bottom: 6px;
 
-        .left {}
+        .label {
+          min-width: 70px;
+          font-weight: 600;
+          color: #34495e;
+          font-size: 15px;
 
-        .right {
+          &::after {
+            content: '：';
+          }
+        }
+
+        .content {
           flex: 1;
+          color: #57606f;
+          font-size: 16px;
+          text-align: justify;
+          word-break: break-all;
+
+          p {
+            margin: 4px 0;
+            line-height: 1.6;
+            position: relative;
+          }
+        }
+      }
+
+      .project-my .content p {
+        padding-left: 14px; // 仅对我负责的部分应用缩进
+
+        .circle {
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: #3498db;
+          font-weight: bold;
         }
       }
     }
+  }
+}
+
+@media print {
+  .company {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 25px;
+  }
+
+  .job {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .project-info,
+  .project-my {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
 </style>

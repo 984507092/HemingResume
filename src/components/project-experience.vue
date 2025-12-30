@@ -31,24 +31,18 @@
           <div class="content list-text">
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                ><strong>资产极致压缩</strong>：通过格式转换（OTF 转 WOFF2）、SVG
-                代码压缩与分包、GIF 动态帧优化，累计降低静态资源体积超 80%。</span
-              >
+              <span class="text"><strong>资产极致压缩</strong>：通过格式转换（OTF 转 WOFF2）、SVG
+                代码压缩与分包、GIF 动态帧优化，累计降低静态资源体积超 80%。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                ><strong>构建与交付优化</strong>：基于 Vite 6 实现代码分割与 Gzip
-                压缩；引入图片预加载策略（Preload/Prefetch）；通过 pnpm 优化依赖下载速度。</span
-              >
+              <span class="text"><strong>构建与交付优化</strong>：基于 Vite 6 实现代码分割与 Gzip
+                压缩；引入图片预加载策略（Preload/Prefetch）；通过 pnpm 优化依赖下载速度。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                ><strong>云原生部署</strong>：编写 Dockerfile 与 Nginx 动态模板脚本，支撑
-                <strong>Env + Docker + K8s</strong> 环境下的动态环境变量注入与接口转发拦截。</span
-              >
+              <span class="text"><strong>云原生部署</strong>：编写 Dockerfile 与 Nginx 动态模板脚本，支撑
+                <strong>Env + Docker + K8s</strong> 环境下的动态环境变量注入与接口转发拦截。</span>
             </div>
           </div>
         </div>
@@ -80,19 +74,14 @@
           <div class="content list-text">
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                ><strong>性能调优</strong
-                >：主导全站性能优化，通过代码审计、懒加载与资源优化，首屏加载时间由 4s 降低至
-                <strong>1.5s</strong>，无效重绘减少 50% 以上。</span
-              >
+              <span class="text"><strong>性能调优</strong>：主导全站性能优化，通过代码审计、懒加载与资源优化，首屏加载时间由 4s 降低至
+                <strong>1.5s</strong>，无效重绘减少 50% 以上。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                >基于
+              <span class="text">基于
                 <strong>AntV X6</strong>
-                实现数据血缘关系图，动态渲染表/字段级依赖关系，支持交互式溯源。</span
-              >
+                实现数据血缘关系图，动态渲染表/字段级依赖关系，支持交互式溯源。</span>
             </div>
           </div>
         </div>
@@ -123,18 +112,13 @@
           <div class="content list-text">
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                >集成 <strong>docxtemplater</strong> 插件，实现了结构化报表的模板化导出与 PDF
-                在线预览闭环。</span
-              >
+              <span class="text">集成 <strong>docxtemplater</strong> 插件，实现了结构化报表的模板化导出与 PDF
+                在线预览闭环。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                >构建
-                <strong>ECharts 可视化体系</strong
-                >，沉淀通用图表配置库，实现复杂数据的联动分析。</span
-              >
+              <span class="text">构建
+                <strong>ECharts 可视化体系</strong>，沉淀通用图表配置库，实现复杂数据的联动分析。</span>
             </div>
           </div>
         </div>
@@ -166,18 +150,14 @@
           <div class="content list-text">
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                >实现 <strong>并发请求调度器</strong>，通过队列与限流策略保障接口稳定性，时延降低约
-                35%。</span
-              >
+              <span class="text">实现 <strong>并发请求调度器</strong>，通过队列与限流策略保障接口稳定性，时延降低约
+                35%。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                >引入
+              <span class="text">引入
                 <strong>Web Worker</strong>
-                剥离密集计算，显著缓解长列表在弱网环境下的掉帧问题。</span
-              >
+                剥离密集计算，显著缓解长列表在弱网环境下的掉帧问题。</span>
             </div>
           </div>
         </div>
@@ -208,15 +188,11 @@
           <div class="content list-text">
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                >基于自定义指令实现按钮级权限控制；集成 ChatGPT 实现 AI 内容辅助生产。</span
-              >
+              <span class="text">基于自定义指令实现按钮级权限控制；集成 ChatGPT 实现 AI 内容辅助生产。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text"
-                >基于 <strong>webpack</strong> 调优，将后台启动时间从 12s 降低至 4s。</span
-              >
+              <span class="text">基于 <strong>webpack</strong> 调优，将后台启动时间从 12s 降低至 4s。</span>
             </div>
           </div>
         </div>
@@ -243,132 +219,133 @@
 </template>
 
 <style lang="scss" scoped>
-  .project-experience {
-    margin-top: 28px;
+.project-experience {
+  padding-top: 28px;
 
-    .title {
-      font-size: 22px;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #3498db;
-      color: #2c3e50;
-      font-weight: 600;
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+
+  .project {
+    margin-bottom: 25px;
+    page-break-inside: auto;
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .project-name {
+        font-size: 19.5px;
+        font-weight: 700;
+        color: #2c3e50;
+      }
+
+      .project-time {
+        font-size: 17px;
+        color: #95a5a6;
+      }
     }
 
-    .project {
-      margin-bottom: 25px;
-      page-break-inside: auto;
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
 
-      .project-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 8px;
-
-        .project-name {
-          font-size: 16.5px;
-          font-weight: 700;
-          color: #2c3e50;
-        }
-
-        .project-time {
-          font-size: 13px;
-          color: #95a5a6;
-        }
+      .skill {
+        padding: 2px 8px;
+        background-color: rgba(2, 2, 3, 0.08);
+        border: 1px solid rgba(52, 152, 219, 0.12);
+        color: #3498db;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 500;
       }
+    }
 
-      .skill-list {
+    .project-info {
+      .info-item {
         display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
 
-        .skill {
-          padding: 2px 8px;
-          background-color: rgba(52, 152, 219, 0.08);
-          border: 1px solid rgba(52, 152, 219, 0.12);
-          color: #3498db;
-          border-radius: 4px;
-          font-size: 11.5px;
-          font-weight: 500;
+        .label {
+          min-width: 70px;
+          font-weight: 600;
+          color: #34495e;
+          font-size: 17.5px;
+
+          &::after {
+            content: '：';
+          }
         }
-      }
 
-      .project-info {
-        .info-item {
-          display: flex;
-          margin-bottom: 6px;
+        .content {
+          flex: 1;
+          color: #57606f;
+          font-size: 17.5px;
+          text-align: justify;
+          word-break: break-word;
+          overflow-wrap: break-word;
 
-          .label {
-            min-width: 70px;
-            font-weight: 600;
+          strong {
             color: #34495e;
-            font-size: 13.5px;
-
-            &::after {
-              content: '：';
-            }
+            background-color: rgba(52, 152, 219, 0.05);
+            padding: 0 4px;
+            border-radius: 3px;
+            font-weight: 700;
           }
 
-          .content {
-            flex: 1;
-            color: #57606f;
-            font-size: 14px;
-            line-height: 1.6;
-            text-align: justify;
-            word-break: break-word;
-            overflow-wrap: break-word;
+          &.list-text {
+            .list-item {
+              display: flex;
+              align-items: flex-start;
+              margin-bottom: 4px;
 
-            strong {
-              color: #34495e;
-              background-color: rgba(52, 152, 219, 0.05);
-              padding: 0 4px;
-              border-radius: 3px;
-              font-weight: 700;
-            }
+              &:last-child {
+                margin-bottom: 0;
+              }
 
-            &.list-text {
-              .list-item {
-                display: flex;
-                align-items: flex-start;
-                margin-bottom: 4px;
+              .dot {
+                color: #3498db;
+                margin-right: 6px;
+                font-weight: bold;
+                flex-shrink: 0;
+              }
 
-                &:last-child {
-                  margin-bottom: 0;
-                }
-
-                .dot {
-                  color: #3498db;
-                  margin-right: 6px;
-                  font-weight: bold;
-                  flex-shrink: 0;
-                }
-
-                .text {
-                  flex: 1;
-                }
+              .text {
+                flex: 1;
+                font-size: 16.5px;
               }
             }
           }
         }
       }
     }
+  }
 
-    .more-projects {
-      border-top: 1px dashed #eee;
-      padding-top: 15px;
-    }
+  .more-projects {
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
   }
-  
-  @media print {
-    .project {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-    
-    .project-header {
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
+}
+
+@media print {
+  .project {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 20px;
   }
+
+  .project-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
 </style>
