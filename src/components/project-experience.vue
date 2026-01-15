@@ -47,7 +47,8 @@
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">控制<strong>页面、按钮、三方登录权限</strong>，实现<strong>大屏可视化</strong>，优化 <strong>chunk 拆分策略</strong>，避免单个 chunk 超过 <strong>500KB</strong>。</span>
+              <span class="text">控制<strong>页面、按钮、三方登录权限</strong>，实现<strong>大屏可视化</strong>，优化 <strong>chunk
+                  拆分策略</strong>，避免单个 chunk 超过 <strong>500KB</strong>。</span>
             </div>
           </div>
         </div>
@@ -115,7 +116,7 @@
     </div>
 
     <!-- 智能监测病种平台 -->
-    <div class="project">
+    <div class="project" v-if="showMoreProjects">
       <div class="project-header">
         <div class="project-name">智能监测病种平台</div>
         <div class="project-time">北京深睿医疗科技有限公司</div>
@@ -182,7 +183,7 @@
     </div>
 
     <!-- 智能数据监管平台 -->
-    <div class="project">
+    <div class="project" v-if="showMoreProjects">
       <div class="project-header">
         <div class="project-name">智能数据监管平台</div>
         <div class="project-time">北京深睿医疗科技有限公司</div>
@@ -291,11 +292,13 @@
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">对接 <strong>ChatGPT</strong> 与 <strong>Midjourney</strong>，实现 AI 询问与 AI 绘图相关功能，提升内容配置效率。</span>
+              <span class="text">对接 <strong>ChatGPT</strong> 与 <strong>Midjourney</strong>，实现 AI 询问与 AI
+                绘图相关功能，提升内容配置效率。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">优化后台启动性能：基于 <strong>webpack</strong> 调优启动流程，启动时间由 <strong>12s</strong> 降至 <strong>4s</strong>。</span>
+              <span class="text">优化后台启动性能：基于 <strong>webpack</strong> 调优启动流程，启动时间由 <strong>12s</strong> 降至
+                <strong>4s</strong>。</span>
             </div>
           </div>
         </div>
@@ -349,7 +352,8 @@
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">通过 <strong>gulp</strong> 同构构建同时产出 CommonJS/ESM，配合 <strong>webpack</strong> 提供 UMD 版本。</span>
+              <span class="text">通过 <strong>gulp</strong> 同构构建同时产出 CommonJS/ESM，配合 <strong>webpack</strong> 提供 UMD
+                版本。</span>
             </div>
           </div>
         </div>
@@ -411,36 +415,6 @@
       </div>
     </div>
 
-    <!-- 医育宝 -->
-    <div class="project">
-      <div class="project-header">
-        <div class="project-name">医育宝</div>
-        <div class="project-time">杭州宝贝派健康科技</div>
-      </div>
-      <div class="skill-list">
-        <span class="skill">小程序</span>
-        <span class="skill">uniapp</span>
-        <span class="skill">Vue</span>
-      </div>
-      <div class="project-info">
-        <div class="info-item">
-          <span class="label">项目简介</span>
-          <div class="content main-text">
-            医疗教育相关的小程序产品。
-          </div>
-        </div>
-        <div class="info-item">
-          <span class="label">技术亮点</span>
-          <div class="content list-text">
-            <div class="list-item">
-              <span class="dot">·</span>
-              <span class="text">基于 <strong>uniapp</strong> 实现跨平台小程序开发。</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- 更多项目 -->
     <div class="project more-projects">
       <div class="project-header">
@@ -460,23 +434,28 @@
           <div class="content list-text">
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">通过 <strong>vue-cli</strong>，结合<strong>eslint + prettier + husky + lint-staged + commitlint</strong> 搭建现代化前端工程，通过 css 变量配置一键换肤。</span>
+              <span class="text">通过 <strong>vue-cli</strong>，结合<strong>eslint + prettier + husky + lint-staged +
+                  commitlint</strong> 搭建现代化前端工程，通过 css 变量配置一键换肤。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">通过 <strong>ECharts</strong> 实现数据可视化以及地图部分的需求；通过 <strong>WebSocket</strong> 实时展示现场的告警信息。</span>
+              <span class="text">通过 <strong>ECharts</strong> 实现数据可视化以及地图部分的需求；通过 <strong>WebSocket</strong>
+                实时展示现场的告警信息。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">通过 <strong>Vue-Draggable</strong> 实现表单设计器的拖拽功能；通过 <strong>VitePress</strong> 搭建运营帮助文档。</span>
+              <span class="text">通过 <strong>Vue-Draggable</strong> 实现表单设计器的拖拽功能；通过 <strong>VitePress</strong>
+                搭建运营帮助文档。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">使用 <strong>vue-seamless-scroll</strong> 插件解决自动滚动问题；使用 <strong>uni.createInnerAudioContext()</strong> 解决背景音乐问题。</span>
+              <span class="text">使用 <strong>vue-seamless-scroll</strong> 插件解决自动滚动问题；使用
+                <strong>uni.createInnerAudioContext()</strong> 解决背景音乐问题。</span>
             </div>
             <div class="list-item">
               <span class="dot">·</span>
-              <span class="text">使用 <strong>微信JSDK</strong> 解决微信分享和微信支付问题；使用 <strong>vue-baberrage</strong> 解决页面弹幕问题。</span>
+              <span class="text">使用 <strong>微信JSDK</strong> 解决微信分享和微信支付问题；使用 <strong>vue-baberrage</strong>
+                解决页面弹幕问题。</span>
             </div>
           </div>
         </div>
@@ -484,6 +463,11 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+  import { ref } from 'vue';
+  const showMoreProjects = ref(false);
+</script>
 
 <style lang="scss" scoped>
   .project-experience {

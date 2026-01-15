@@ -24,7 +24,7 @@
 <style lang="scss" scoped>
 .personal-information {
   text-align: center;
-  // margin-bottom: 20px;
+  margin-bottom: 20px;
   // border-bottom: 1px solid #f0f0f0;
   padding-bottom: 20px;
 
