@@ -48,6 +48,55 @@
       </div>
 
       <div class="job">
+        <div class="job-name">医学科研数据库</div>
+        <div class="skill-list">
+          <div class="skill">React 18</div>
+          <div class="skill">TypeScript</div>
+          <div class="skill">Vite 6</div>
+          <div class="skill">Ant Design</div>
+          <div class="skill">Zustand</div>
+          <div class="skill">vite-plugin-svg-icons</div>
+          <div class="skill">Docker</div>
+          <div class="skill">Kubernetes</div>
+        </div>
+        <div class="project-info">
+          <div class="label">
+            项目简介
+          </div>
+          <div class="content">
+            <p>
+              高性能医学科研数据管理系统，系统支持对省内政策支持申报的医学科研项目进行项目数据汇交，并对系统沉淀的项目汇交数据进行开放共享和进一步的科研数据分析应用；
+            </p>
+          </div>
+        </div>
+        <div class="project-my">
+          <div class="label">
+            我负责的
+          </div>
+          <div class="content">
+            <p>
+              <span class="circle">·</span>实现<strong>资产极致压缩</strong>：通过格式转换（<strong>OTF 转
+                WOFF2</strong>）、<strong>SVG</strong>
+              代码压缩与分包、<strong>GIF</strong> 动态帧优化，累计降低静态资源体积超 <strong>80%</strong>。
+            </p>
+            <p>
+              <span class="circle">·</span>基于 <strong>Vite 6</strong> 实现<strong>构建与交付优化</strong>：代码分割与
+              <strong>Gzip</strong>
+              压缩；引入图片预加载策略（<strong>Preload/Prefetch</strong>）；通过 <strong>pnpm</strong> 优化依赖下载速度。
+            </p>
+            <p>
+              <span class="circle">·</span>编写 <strong>Dockerfile</strong> 与 <strong>Nginx</strong> 动态模板脚本，支撑
+              <strong>Env + Docker + K8s</strong> 环境下的<strong>动态环境变量注入</strong>与接口转发拦截，实现云原生部署。
+            </p>
+            <p>
+              <span class="circle">·</span>控制<strong>页面、按钮、三方登录权限</strong>，实现<strong>大屏可视化</strong>，优化 <strong>chunk
+                拆分策略</strong>，避免单个 chunk 超过 <strong>500KB</strong>。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="job">
         <div class="job-name">多模态数据资产管理平台</div>
         <div class="skill-list">
           <div class="skill">React</div>
@@ -598,118 +647,51 @@
 </template>
 
 <style lang="scss" scoped>
-.company-project {
-  padding-top: 28px;
-  page-break-inside: auto;
-
-  .title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #3498db;
-    color: #2c3e50;
-    font-weight: 600;
-  }
-
-  p {
-    margin: 4px 0;
-    font-size: 16px;
-    color: #57606f;
-    line-height: 1.7;
-    text-align: justify;
-    text-justify: inter-ideograph;
-    position: relative;
-    word-break: break-all;
-  }
-
-  .company {
-    margin-bottom: 24px;
+  .company-project {
+    padding-top: 28px;
     page-break-inside: auto;
 
-    .company-name {
-      font-size: 18.5px;
-      color: #2c3e50;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .company-duty {
-      margin-bottom: 10px;
-      display: flex;
-      flex-direction: column;
-
-      .label {
-        min-width: 70px;
-        font-weight: 600;
-        color: #34495e;
-        font-size: 16.5px;
-
-        &::after {
-          content: '：';
-        }
-      }
-
-      .content {
-        flex: 1;
-        color: #57606f;
-        font-size: 16px;
-        text-align: justify;
-
-        p {
-          margin: 4px 0;
-          line-height: 1.6;
-          position: relative;
-          padding-left: 14px; // 为圆点留出位置
-
-          .circle {
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #3498db;
-            font-weight: bold;
-          }
-        }
-      }
-    }
-
-    .job {
+    .title {
+      font-size: 24px;
       margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #3498db;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 4px 0;
+      font-size: 16px;
+      color: #57606f;
+      line-height: 1.7;
+      text-align: justify;
+      text-justify: inter-ideograph;
+      position: relative;
+      word-break: break-all;
+    }
+
+    .company {
+      margin-bottom: 24px;
       page-break-inside: auto;
 
-      .job-name {
-        font-size: 18px;
-        font-weight: 700;
+      .company-name {
+        font-size: 18.5px;
         color: #2c3e50;
+        font-weight: 700;
         margin-bottom: 6px;
       }
 
-      .skill-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
+      .company-duty {
         margin-bottom: 10px;
-
-        .skill {
-          padding: 2px 8px;
-          background-color: rgba(52, 152, 219, 0.08);
-          border: 1px solid rgba(52, 152, 219, 0.12);
-          color: #3498db;
-          border-radius: 4px;
-          font-size: 13px;
-          font-weight: 500;
-        }
-      }
-
-      .project-info,
-      .project-my {
-        // display: flex;
-        margin-bottom: 6px;
+        display: flex;
+        flex-direction: column;
 
         .label {
           min-width: 70px;
           font-weight: 600;
           color: #34495e;
-          font-size: 15px;
+          font-size: 16.5px;
 
           &::after {
             content: '：';
@@ -721,47 +703,114 @@
           color: #57606f;
           font-size: 16px;
           text-align: justify;
-          word-break: break-all;
 
           p {
             margin: 4px 0;
             line-height: 1.6;
             position: relative;
+            padding-left: 14px; // 为圆点留出位置
+
+            .circle {
+              position: absolute;
+              left: 0;
+              top: 0;
+              color: #3498db;
+              font-weight: bold;
+            }
           }
         }
       }
 
-      .project-my .content p {
-        padding-left: 14px; // 仅对我负责的部分应用缩进
+      .job {
+        margin-bottom: 20px;
+        page-break-inside: auto;
 
-        .circle {
-          position: absolute;
-          left: 0;
-          top: 0;
-          color: #3498db;
-          font-weight: bold;
+        .job-name {
+          font-size: 18px;
+          font-weight: 700;
+          color: #2c3e50;
+          margin-bottom: 6px;
+        }
+
+        .skill-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          margin-bottom: 10px;
+
+          .skill {
+            padding: 2px 8px;
+            background-color: rgba(52, 152, 219, 0.08);
+            border: 1px solid rgba(52, 152, 219, 0.12);
+            color: #3498db;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+          }
+        }
+
+        .project-info,
+        .project-my {
+          // display: flex;
+          margin-bottom: 6px;
+
+          .label {
+            min-width: 70px;
+            font-weight: 600;
+            color: #34495e;
+            font-size: 15px;
+
+            &::after {
+              content: '：';
+            }
+          }
+
+          .content {
+            flex: 1;
+            color: #57606f;
+            font-size: 16px;
+            text-align: justify;
+            word-break: break-all;
+
+            p {
+              margin: 4px 0;
+              line-height: 1.6;
+              position: relative;
+            }
+          }
+        }
+
+        .project-my .content p {
+          padding-left: 14px; // 仅对我负责的部分应用缩进
+
+          .circle {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #3498db;
+            font-weight: bold;
+          }
         }
       }
     }
   }
-}
 
-@media print {
-  .company {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin-top: 25px;
-  }
+  @media print {
+    .company {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      margin-top: 25px;
+    }
 
-  .job {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
+    .job {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
 
-  .project-info,
-  .project-my {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    .project-info,
+    .project-my {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
   }
-}
 </style>

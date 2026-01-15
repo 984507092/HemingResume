@@ -1,7 +1,7 @@
 {
-  "name": "warbler-fe",
+  "name": "heming-resume",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite --open",
     "build": "vue-tsc && vite build",

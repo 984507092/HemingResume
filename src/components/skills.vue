@@ -25,7 +25,7 @@
           <p>
             <span class="label">数据可视化</span>：精通
             <strong>ECharts、Canvas、AntV (G2/X6/G6)</strong>，拥有丰富的大屏交互与复杂拓扑图开发经验；掌握基于
-            <strong>ResizeObserver</strong> 的大屏自适应适配方案。
+            <strong>ResizeObserver</strong> 的大屏自适应适配方案；了解 <strong>BPMN</strong> 和 <strong>ReactFlow</strong> 流程图开发。
           </p>
         </div>
       </div>
