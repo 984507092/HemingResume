@@ -9,7 +9,7 @@
         </div>
         <div class="sub-info">
           <span class="major">计算机科学与技术</span>
-          <span class="time">2024.09 ~ 2026.06</span>
+          <span class="time">2025.09 ~ 2027.06</span>
         </div>
       </div>
       <div class="edu-item">
@@ -19,7 +19,7 @@
         </div>
         <div class="sub-info">
           <span class="major">软件技术应用（前端开发）</span>
-          <span class="time">2020.09 ~ 2023.06</span>
+          <span class="time">2019.09 ~ 2022.06</span>
         </div>
       </div>
     </div>
