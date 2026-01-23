@@ -1,0 +1,297 @@
+@charset "UTF-8";
+.personal-information[data-v-1d1139d4] {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.personal-information .header[data-v-1d1139d4] {
+  margin-bottom: 12px;
+}
+.personal-information .header .name[data-v-1d1139d4] {
+  font-size: 34px;
+  margin: 0;
+  color: #2c3e50;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.personal-information .header .job-title[data-v-1d1139d4] {
+  font-size: 20px;
+  color: #3498db;
+  font-weight: 500;
+  margin-top: 4px;
+}
+.personal-information .contact-info[data-v-1d1139d4] {
+  font-size: 17px;
+  color: #606266;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.personal-information .contact-info .divider[data-v-1d1139d4] {
+  color: #dcdfe6;
+}
+.personal-information .summary[data-v-1d1139d4] {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: #57606f;
+  line-height: 1.8;
+  text-align: justify;
+  background-color: #f9f9f9;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+.personal-information .summary strong[data-v-1d1139d4] {
+  color: #34495e;
+  background-color: #3498db0d;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+@media print {
+  .personal-information .summary[data-v-1d1139d4] {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+  }
+}
+.skills[data-v-dc8671af] {
+  padding-top: 5px;
+  page-break-inside: auto;
+}
+.skills .title[data-v-dc8671af] {
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3498db;
+  color: #2c3e50;
+  font-weight: 600;
+}
+.skills .skill-groups[data-v-dc8671af] {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.skills .skill-group .group-title[data-v-dc8671af] {
+  font-size: 18px;
+  color: #3498db;
+  margin: 0 0 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.skills .skill-group .group-title[data-v-dc8671af]:before {
+  content: '';
+  width: 4px;
+  height: 16px;
+  background-color: #3498db;
+  margin-right: 8px;
+  border-radius: 2px;
+}
+.skills .skill-group .skill-content[data-v-dc8671af] {
+  padding-left: 12px;
+}
+.skills .skill-group .skill-content p[data-v-dc8671af] {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #57606f;
+  line-height: 1.7;
+}
+.skills .skill-group .skill-content p .label[data-v-dc8671af] {
+  color: #2c3e50;
+  font-weight: 600;
+}
+.skills .skill-group .skill-content p strong[data-v-dc8671af] {
+  color: #3498db;
+  font-weight: 700;
+  padding: 0 2px;
+  margin: 0;
+}
+@media print {
+  .skill-group[data-v-dc8671af] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 20px;
+  }
+  .skill-group strong[data-v-dc8671af] {
+    color: #3498db !important;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.2);
+  }
+}
+.warbler-fe[data-v-1b53cda5] {
+  padding-top: 28px;
+  page-break-inside: auto;
+}
+.warbler-fe .title[data-v-1b53cda5] {
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3498db;
+  color: #2c3e50;
+  font-weight: 600;
+}
+.warbler-fe .job[data-v-1b53cda5] {
+  margin-bottom: 20px;
+  page-break-inside: auto;
+}
+.warbler-fe .job .job-header[data-v-1b53cda5] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.warbler-fe .job .job-header .job-name[data-v-1b53cda5] {
+  font-size: 18.5px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+.warbler-fe .job .job-header .job-time[data-v-1b53cda5] {
+  font-size: 14.5px;
+  color: #bdc3c7;
+}
+.warbler-fe .job .skill-list[data-v-1b53cda5] {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.warbler-fe .job .skill-list .skill[data-v-1b53cda5] {
+  font-size: 13px;
+  padding: 2px 8px;
+  background: #f1f2f6;
+  color: #747d8c;
+  border-radius: 3px;
+}
+.warbler-fe .job .project-info .desc-item[data-v-1b53cda5] {
+  margin: 4px 0;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.6;
+}
+.warbler-fe .job .project-info .desc-item .dot[data-v-1b53cda5] {
+  color: #3498db;
+  margin-right: 8px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.warbler-fe .job .project-info .desc-item .text[data-v-1b53cda5] {
+  flex: 1;
+  color: #57606f;
+  font-size: 16px;
+  text-align: justify;
+  word-break: break-all;
+}
+.warbler-fe .job .project-info .desc-item .text strong[data-v-1b53cda5] {
+  color: #34495e;
+  background-color: #3498db0d;
+  padding: 0 4px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.warbler-fe .job .project-info .desc-item .text a[data-v-1b53cda5] {
+  color: #3498db;
+  text-decoration: none;
+}
+.warbler-fe .job .project-info .desc-item .text a[data-v-1b53cda5]:hover {
+  text-decoration: underline;
+}
+.warbler-fe .social[data-v-1b53cda5] {
+  margin-top: 15px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+.warbler-fe .social .social-item[data-v-1b53cda5] {
+  display: flex;
+  font-size: 15.5px;
+  margin-bottom: 5px;
+}
+.warbler-fe .social .social-item[data-v-1b53cda5]:last-child {
+  margin-bottom: 0;
+}
+.warbler-fe .social .social-item .label[data-v-1b53cda5] {
+  width: 100px;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+.warbler-fe .social .social-item a[data-v-1b53cda5] {
+  color: #2c3e50;
+  text-decoration: none;
+  word-break: break-all;
+}
+.warbler-fe .social .social-item a[data-v-1b53cda5]:hover {
+  color: #3498db;
+}
+@media print {
+  .job[data-v-1b53cda5] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 20px;
+  }
+  .job-header[data-v-1b53cda5] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+.educational[data-v-a1fdc3e9] {
+  padding-top: 28px;
+  page-break-inside: auto;
+}
+.educational .title[data-v-a1fdc3e9] {
+  font-size: 24px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3498db;
+  color: #2c3e50;
+  font-weight: 600;
+}
+.educational .edu-list[data-v-a1fdc3e9] {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.educational .edu-item[data-v-a1fdc3e9] {
+  display: flex;
+  flex-direction: column;
+}
+.educational .edu-item .main-info[data-v-a1fdc3e9] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.educational .edu-item .main-info .school[data-v-a1fdc3e9] {
+  font-size: 19.5px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+.educational .edu-item .main-info .degree[data-v-a1fdc3e9] {
+  font-size: 16.5px;
+  color: #3498db;
+  font-weight: 600;
+  padding: 2px 8px;
+  background: #3498db1a;
+  border-radius: 4px;
+}
+.educational .edu-item .sub-info[data-v-a1fdc3e9] {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16.5px;
+  color: #7f8c8d;
+}
+.educational .edu-item .sub-info .time[data-v-a1fdc3e9] {
+  font-size: 16.5px;
+  font-family: Consolas, monospace;
+}
+@media print {
+  .edu-item[data-v-a1fdc3e9] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-top: 20px;
+  }
+  .main-info[data-v-a1fdc3e9] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
