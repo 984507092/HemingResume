@@ -4,16 +4,12 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: './', // 对于 GitHub Pages 部署很重要
   plugins: [vue()],
   resolve: {
-    alias: [
-      {
-        find: '@',
-        replacement: path.resolve(__dirname, './src'), // 路径别名
-      },
-      { find: 'views', replacement: '/src/views' },
-    ],
+    alias: {
+      '@': path.resolve(__dirname, './src'), // 路径别名
+    },
   },
   build: {
     outDir: 'dist', // 构建输出目录

@@ -1,19 +1,15 @@
 <template>
   <div id="app-root">
-    <keep-alive>
-      <component :is="currentComponent" v-if="currentComponent"></component>
-    </keep-alive>
+    <router-view />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
-import dynamicImport from "./utils/dynamicImport";
+import { useRouter, useRoute } from 'vue-router';
 
-const selectedTemplate = ref("template2");
-const currentComponent = computed(() => {
-  return dynamicImport(selectedTemplate.value);
-});
+// 确保路由器已初始化
+const router = useRouter();
+const route = useRoute();
 </script>
 
 <style lang="scss">
