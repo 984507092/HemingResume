@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # 你的开发分支
+    branches: [ heming ]  # 你的开发分支
 
 jobs:
   deploy:
@@ -32,4 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages  # 部署到独立的 gh-pages 分支
+          publish_branch: heming  # 部署到独立的 gh-pages 分支
