@@ -4,7 +4,8 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './', // 对于 GitHub Pages 部署很重要
+  base: '/', // GitHub Pages 仓库名称作为基础路径
+
   plugins: [vue()],
   resolve: {
     alias: {
