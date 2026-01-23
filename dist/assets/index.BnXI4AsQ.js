@@ -3958,7 +3958,7 @@ const cd = { id: 'app-root' },
   ld = da({
     __name: 'App',
     setup(t) {
-      const s = an('template1'),
+      const s = an('template2'),
         a = Un(() => id(s.value))
       return (e, n) => (
         ct(),

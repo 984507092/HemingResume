@@ -6,6 +6,10 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/template2',
   },
   {
+    path: '/',
+    redirect: '/template2',
+  },
+  {
     path: '/template1',
     name: 'Template1',
     component: () => import('@/views/template1/index.vue'),
