@@ -1,3 +1,4 @@
+# 发布到 GitHub Pages（必须：Settings -> Pages -> Source 选 "GitHub Actions"）
 name: Deploy to GitHub Pages
 
 on:
@@ -40,8 +41,17 @@ jobs:
 
       - name: Verify build output
         run: |
-          echo "=== dist/index.html script/src ==="
-          grep -E 'src=|href=.*\.(js|css)' dist/index.html || true
+          echo "=== dist/index.html script/link ==="
+          grep -E 'src=|href=' dist/index.html || true
+          if grep -q 'main\.ts\|/src/' dist/index.html; then
+            echo "ERROR: dist/index.html still contains source paths; build base may be wrong."
+            exit 1
+          fi
+          if ! grep -q '/HemingResume/assets/' dist/index.html; then
+            echo "ERROR: dist/index.html should contain /HemingResume/assets/ for deployment."
+            exit 1
+          fi
+          echo "Build output OK."
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
