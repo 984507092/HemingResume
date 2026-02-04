@@ -3,12 +3,12 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      'assets/index.CjbndfYQ.js',
-      'assets/educational.DGcpwyjM.js',
-      'assets/educational.C1b2MjXg.css',
-      'assets/index.BJbYSw9h.css',
-      'assets/index.C3aBnMRy.js',
-      'assets/index.h3fyQTBv.css',
+      './index.r9c8mTV6.js',
+      './educational.XE4rRfGC.js',
+      './educational.C1b2MjXg.css',
+      './index.BJbYSw9h.css',
+      './index.W93CM3uL.js',
+      './index.h3fyQTBv.css',
     ]),
 ) => i.map((i) => d[i])
 ;(function () {
@@ -60,7 +60,7 @@ const X = {},
     n > -1 && e.splice(n, 1)
   },
   Bi = Object.prototype.hasOwnProperty,
-  k = (e, t) => Bi.call(e, t),
+  q = (e, t) => Bi.call(e, t),
   V = Array.isArray,
   Bt = (e) => bn(e) === '[object Map]',
   Vi = (e) => bn(e) === '[object Set]',
@@ -94,7 +94,7 @@ const X = {},
   Rr = (e, t, n, s = !1) => {
     Object.defineProperty(e, t, { configurable: !0, enumerable: !1, writable: s, value: n })
   },
-  qi = (e) => {
+  ki = (e) => {
     const t = parseFloat(e)
     return isNaN(t) ? e : t
   }
@@ -122,7 +122,7 @@ function cs(e) {
     return t
   } else if (re(e) || te(e)) return e
 }
-const ki = /;(?![^(]*\))/g,
+const qi = /;(?![^(]*\))/g,
   $i = /:([^]+)/,
   Ji = /\/\*[^]*?\*\//g
 function zi(e) {
@@ -130,7 +130,7 @@ function zi(e) {
   return (
     e
       .replace(Ji, '')
-      .split(ki)
+      .split(qi)
       .forEach((n) => {
         if (n) {
           const s = n.split($i)
@@ -466,7 +466,7 @@ function Nr(e) {
 }
 const Wn = new WeakMap(),
   gt = Symbol(''),
-  qn = Symbol(''),
+  kn = Symbol(''),
   Jt = Symbol('')
 function oe(e, t, n) {
   if (Se && Y) {
@@ -476,7 +476,7 @@ function oe(e, t, n) {
     ;(r || (s.set(n, (r = new hs())), (r.map = s), (r.key = n)), r.track())
   }
 }
-function qe(e, t, n, s, r, i) {
+function ke(e, t, n, s, r, i) {
   const o = Wn.get(e)
   if (!o) {
     $t++
@@ -497,10 +497,10 @@ function qe(e, t, n, s, r, i) {
     } else
       switch (((n !== void 0 || o.has(void 0)) && l(o.get(n)), h && l(o.get(Jt)), t)) {
         case 'add':
-          c ? h && l(o.get('length')) : (l(o.get(gt)), Bt(e) && l(o.get(qn)))
+          c ? h && l(o.get('length')) : (l(o.get(gt)), Bt(e) && l(o.get(kn)))
           break
         case 'delete':
-          c || (l(o.get(gt)), Bt(e) && l(o.get(qn)))
+          c || (l(o.get(gt)), Bt(e) && l(o.get(kn)))
           break
         case 'set':
           Bt(e) && l(o.get(gt))
@@ -510,11 +510,11 @@ function qe(e, t, n, s, r, i) {
   as()
 }
 function bt(e) {
-  const t = q(e)
+  const t = k(e)
   return t === e ? t : (oe(t, 'iterate', Jt), Ce(e) ? t : t.map(ze))
 }
 function ps(e) {
-  return (oe((e = q(e)), 'iterate', Jt), e)
+  return (oe((e = k(e)), 'iterate', Jt), e)
 }
 function tt(e, t) {
   return lt(e) ? (At(e) ? zt(ze(t)) : zt(t)) : ze(t)
@@ -656,14 +656,14 @@ function Is(e, t, n, s) {
   )
 }
 function Dn(e, t, n) {
-  const s = q(e)
+  const s = k(e)
   oe(s, 'iterate', Jt)
   const r = s[t](...n)
-  return (r === -1 || r === !1) && _s(n[0]) ? ((n[0] = q(n[0])), s[t](...n)) : r
+  return (r === -1 || r === !1) && _s(n[0]) ? ((n[0] = k(n[0])), s[t](...n)) : r
 }
 function Dt(e, t, n = []) {
   ;($e(), us())
-  const s = q(e)[t].apply(e, n)
+  const s = k(e)[t].apply(e, n)
   return (as(), Je(), s)
 }
 const ro = rs('__proto__,__v_isRef,__isVue'),
@@ -675,7 +675,7 @@ const ro = rs('__proto__,__v_isRef,__isVue'),
   )
 function io(e) {
   It(e) || (e = String(e))
-  const t = q(this)
+  const t = k(this)
   return (oe(t, 'has', e), t.hasOwnProperty(e))
 }
 class Dr {
@@ -718,18 +718,18 @@ class Lr extends Dr {
     const o = V(t) && ls(n)
     if (!this._isShallow) {
       const h = lt(i)
-      if ((!Ce(s) && !lt(s) && ((i = q(i)), (s = q(s))), !o && ce(i) && !ce(s)))
+      if ((!Ce(s) && !lt(s) && ((i = k(i)), (s = k(s))), !o && ce(i) && !ce(s)))
         return (h || (i.value = s), !0)
     }
-    const l = o ? Number(n) < t.length : k(t, n),
+    const l = o ? Number(n) < t.length : q(t, n),
       c = Reflect.set(t, n, s, ce(t) ? t : r)
-    return (t === q(r) && (l ? ot(s, i) && qe(t, 'set', n, s) : qe(t, 'add', n, s)), c)
+    return (t === k(r) && (l ? ot(s, i) && ke(t, 'set', n, s) : ke(t, 'add', n, s)), c)
   }
   deleteProperty(t, n) {
-    const s = k(t, n)
+    const s = q(t, n)
     t[n]
     const r = Reflect.deleteProperty(t, n)
-    return (r && s && qe(t, 'delete', n, void 0), r)
+    return (r && s && ke(t, 'delete', n, void 0), r)
   }
   has(t, n) {
     const s = Reflect.has(t, n)
@@ -753,19 +753,19 @@ class oo extends Dr {
 const lo = new Lr(),
   co = new oo(),
   fo = new Lr(!0)
-const kn = (e) => e,
+const qn = (e) => e,
   nn = (e) => Reflect.getPrototypeOf(e)
 function uo(e, t, n) {
   return function (...s) {
     const r = this.__v_raw,
-      i = q(r),
+      i = k(r),
       o = Bt(i),
       l = e === 'entries' || (e === Symbol.iterator && o),
       c = e === 'keys' && o,
       h = r[e](...s),
-      u = n ? kn : t ? zt : ze
+      u = n ? qn : t ? zt : ze
     return (
-      !t && oe(i, 'iterate', c ? qn : gt),
+      !t && oe(i, 'iterate', c ? kn : gt),
       {
         next() {
           const { value: d, done: g } = h.next()
@@ -787,23 +787,23 @@ function ao(e, t) {
   const n = {
     get(r) {
       const i = this.__v_raw,
-        o = q(i),
-        l = q(r)
+        o = k(i),
+        l = k(r)
       e || (ot(r, l) && oe(o, 'get', r), oe(o, 'get', l))
       const { has: c } = nn(o),
-        h = t ? kn : e ? zt : ze
+        h = t ? qn : e ? zt : ze
       if (c.call(o, r)) return h(i.get(r))
       if (c.call(o, l)) return h(i.get(l))
       i !== o && i.get(r)
     },
     get size() {
       const r = this.__v_raw
-      return (!e && oe(q(r), 'iterate', gt), r.size)
+      return (!e && oe(k(r), 'iterate', gt), r.size)
     },
     has(r) {
       const i = this.__v_raw,
-        o = q(i),
-        l = q(r)
+        o = k(i),
+        l = k(r)
       return (
         e || (ot(r, l) && oe(o, 'has', r), oe(o, 'has', l)),
         r === l ? i.has(r) : i.has(r) || i.has(l)
@@ -812,8 +812,8 @@ function ao(e, t) {
     forEach(r, i) {
       const o = this,
         l = o.__v_raw,
-        c = q(l),
-        h = t ? kn : e ? zt : ze
+        c = k(l),
+        h = t ? qn : e ? zt : ze
       return (!e && oe(c, 'iterate', gt), l.forEach((u, d) => r.call(i, h(u), h(d), o)))
     },
   }
@@ -824,32 +824,32 @@ function ao(e, t) {
         ? { add: sn('add'), set: sn('set'), delete: sn('delete'), clear: sn('clear') }
         : {
             add(r) {
-              !t && !Ce(r) && !lt(r) && (r = q(r))
-              const i = q(this)
-              return (nn(i).has.call(i, r) || (i.add(r), qe(i, 'add', r, r)), this)
+              !t && !Ce(r) && !lt(r) && (r = k(r))
+              const i = k(this)
+              return (nn(i).has.call(i, r) || (i.add(r), ke(i, 'add', r, r)), this)
             },
             set(r, i) {
-              !t && !Ce(i) && !lt(i) && (i = q(i))
-              const o = q(this),
+              !t && !Ce(i) && !lt(i) && (i = k(i))
+              const o = k(this),
                 { has: l, get: c } = nn(o)
               let h = l.call(o, r)
-              h || ((r = q(r)), (h = l.call(o, r)))
+              h || ((r = k(r)), (h = l.call(o, r)))
               const u = c.call(o, r)
-              return (o.set(r, i), h ? ot(i, u) && qe(o, 'set', r, i) : qe(o, 'add', r, i), this)
+              return (o.set(r, i), h ? ot(i, u) && ke(o, 'set', r, i) : ke(o, 'add', r, i), this)
             },
             delete(r) {
-              const i = q(this),
+              const i = k(this),
                 { has: o, get: l } = nn(i)
               let c = o.call(i, r)
-              ;(c || ((r = q(r)), (c = o.call(i, r))), l && l.call(i, r))
+              ;(c || ((r = k(r)), (c = o.call(i, r))), l && l.call(i, r))
               const h = i.delete(r)
-              return (c && qe(i, 'delete', r, void 0), h)
+              return (c && ke(i, 'delete', r, void 0), h)
             },
             clear() {
-              const r = q(this),
+              const r = k(this),
                 i = r.size !== 0,
                 o = r.clear()
-              return (i && qe(r, 'clear', void 0, void 0), o)
+              return (i && ke(r, 'clear', void 0, void 0), o)
             },
           },
     ),
@@ -868,7 +868,7 @@ function gs(e, t) {
         ? e
         : r === '__v_raw'
           ? s
-          : Reflect.get(k(n, r) && r in s ? n : s, r, i)
+          : Reflect.get(q(n, r) && r in s ? n : s, r, i)
 }
 const ho = { get: gs(!1, !1) },
   po = { get: gs(!1, !0) },
@@ -924,12 +924,12 @@ function Ce(e) {
 function _s(e) {
   return e ? !!e.__v_raw : !1
 }
-function q(e) {
+function k(e) {
   const t = e && e.__v_raw
-  return t ? q(t) : e
+  return t ? k(t) : e
 }
 function yo(e) {
-  return (!k(e, '__v_skip') && Object.isExtensible(e) && Rr(e, '__v_skip', !0), e)
+  return (!q(e, '__v_skip') && Object.isExtensible(e) && Rr(e, '__v_skip', !0), e)
 }
 const ze = (e) => (te(e) ? An(e) : e),
   zt = (e) => (te(e) ? $n(e) : e)
@@ -950,7 +950,7 @@ class xo {
     ;((this.dep = new hs()),
       (this.__v_isRef = !0),
       (this.__v_isShallow = !1),
-      (this._rawValue = n ? t : q(t)),
+      (this._rawValue = n ? t : k(t)),
       (this._value = n ? t : ze(t)),
       (this.__v_isShallow = n))
   }
@@ -960,7 +960,7 @@ class xo {
   set value(t) {
     const n = this._rawValue,
       s = this.__v_isShallow || Ce(t) || lt(t)
-    ;((t = s ? t : q(t)),
+    ;((t = s ? t : k(t)),
       ot(t, n) && ((this._rawValue = t), (this._value = s ? t : ze(t)), this.dep.trigger()))
   }
 }
@@ -1024,16 +1024,16 @@ function wo(e, t, n = X) {
     d,
     g,
     m,
-    w = !1,
-    P = !1
+    S = !1,
+    O = !1
   if (
     (ce(e)
-      ? ((d = () => e.value), (w = Ce(e)))
+      ? ((d = () => e.value), (S = Ce(e)))
       : At(e)
-        ? ((d = () => h(e)), (w = !0))
+        ? ((d = () => h(e)), (S = !0))
         : V(e)
-          ? ((P = !0),
-            (w = e.some((I) => At(I) || Ce(I))),
+          ? ((O = !0),
+            (S = e.some((I) => At(I) || Ce(I))),
             (d = () =>
               e.map((I) => {
                 if (ce(I)) return I.value
@@ -1077,17 +1077,17 @@ function wo(e, t, n = X) {
       ;(I(...z), N())
     }
   }
-  let T = P ? new Array(e.length).fill(rn) : rn
+  let T = O ? new Array(e.length).fill(rn) : rn
   const L = (I) => {
     if (!(!(u.flags & 1) || (!u.dirty && !I)))
       if (t) {
         const z = u.run()
-        if (r || w || (P ? z.some((ie, Z) => ot(ie, T[Z])) : ot(z, T))) {
+        if (r || S || (O ? z.some((ie, Z) => ot(ie, T[Z])) : ot(z, T))) {
           g && g()
           const ie = ht
           ht = u
           try {
-            const Z = [z, T === rn ? void 0 : P && T[0] === rn ? [] : T, m]
+            const Z = [z, T === rn ? void 0 : O && T[0] === rn ? [] : T, m]
             ;((T = z), c ? c(t, 3, Z) : t(...Z))
           } finally {
             ht = ie
@@ -1213,7 +1213,7 @@ function vs(e) {
   }
 }
 function Wr() {
-  dn || (dn = Gr.then(kr))
+  dn || (dn = Gr.then(qr))
 }
 function To(e) {
   ;(V(e)
@@ -1232,7 +1232,7 @@ function Ns(e, t, n = Fe + 1) {
     }
   }
 }
-function qr(e) {
+function kr(e) {
   if (Ct.length) {
     const t = [...new Set(Ct)].sort((n, s) => Qt(n) - Qt(s))
     if (((Ct.length = 0), nt)) {
@@ -1247,7 +1247,7 @@ function qr(e) {
   }
 }
 const Qt = (e) => (e.id == null ? (e.flags & 2 ? -1 : 1 / 0) : e.id)
-function kr(e) {
+function qr(e) {
   try {
     for (Fe = 0; Fe < de.length; Fe++) {
       const t = de[Fe]
@@ -1260,7 +1260,7 @@ function kr(e) {
       const t = de[Fe]
       t && (t.flags &= -2)
     }
-    ;((Fe = -1), (de.length = 0), qr(), (dn = null), (de.length || Ct.length) && kr())
+    ;((Fe = -1), (de.length = 0), kr(), (dn = null), (de.length || Ct.length) && qr())
   }
 }
 let Ae = null,
@@ -1301,7 +1301,7 @@ function on(e, t) {
     ;(s === n && (n = le.provides = Object.create(s)), (n[e] = t))
   }
 }
-function ke(e, t, n = !1) {
+function qe(e, t, n = !1) {
   const s = Fl()
   if (s || wt) {
     let r = wt
@@ -1316,7 +1316,7 @@ function ke(e, t, n = !1) {
   }
 }
 const No = Symbol.for('v-scx'),
-  Mo = () => ke(No)
+  Mo = () => qe(No)
 function ln(e, t, n) {
   return Jr(e, t, n)
 }
@@ -1335,7 +1335,7 @@ function Jr(e, t, n = X) {
     }
   }
   const u = le
-  l.call = (m, w, P) => je(m, u, w, P)
+  l.call = (m, S, O) => je(m, u, S, O)
   let d = !1
   ;(i === 'post'
     ? (l.scheduler = (m) => {
@@ -1343,8 +1343,8 @@ function Jr(e, t, n = X) {
       })
     : i !== 'sync' &&
       ((d = !0),
-      (l.scheduler = (m, w) => {
-        w ? m() : vs(m)
+      (l.scheduler = (m, S) => {
+        S ? m() : vs(m)
       })),
     (l.augmentJob = (m) => {
       ;(t && (m.flags |= 4), d && ((m.flags |= 2), u && ((m.id = u.uid), (m.i = u))))
@@ -1389,7 +1389,7 @@ function Yr(e) {
 const pn = new WeakMap()
 function Gt(e, t, n, s, r = !1) {
   if (V(e)) {
-    e.forEach((w, P) => Gt(w, t && (V(t) ? t[P] : t), n, s, r))
+    e.forEach((S, O) => Gt(S, t && (V(t) ? t[O] : t), n, s, r))
     return
   }
   if (Kt(s) && !r) {
@@ -1405,32 +1405,32 @@ function Gt(e, t, n, s, r = !1) {
     h = t && t.r,
     u = l.refs === X ? (l.refs = {}) : l.refs,
     d = l.setupState,
-    g = q(d),
-    m = d === X ? Er : (w) => k(g, w)
+    g = k(d),
+    m = d === X ? Er : (S) => q(g, S)
   if (h != null && h !== c) {
     if ((Ms(t), re(h))) ((u[h] = null), m(h) && (d[h] = null))
     else if (ce(h)) {
       h.value = null
-      const w = t
-      w.k && (u[w.k] = null)
+      const S = t
+      S.k && (u[S.k] = null)
     }
   }
   if (B(c)) en(c, l, 12, [o, u])
   else {
-    const w = re(c),
-      P = ce(c)
-    if (w || P) {
+    const S = re(c),
+      O = ce(c)
+    if (S || O) {
       const j = () => {
         if (e.f) {
-          const N = w ? (m(c) ? d[c] : u[c]) : c.value
+          const N = S ? (m(c) ? d[c] : u[c]) : c.value
           if (r) V(N) && os(N, i)
           else if (V(N)) N.includes(i) || N.push(i)
-          else if (w) ((u[c] = [i]), m(c) && (d[c] = u[c]))
+          else if (S) ((u[c] = [i]), m(c) && (d[c] = u[c]))
           else {
             const T = [i]
             ;((c.value = T), e.k && (u[e.k] = T))
           }
-        } else w ? ((u[c] = o), m(c) && (d[c] = o)) : P && ((c.value = o), e.k && (u[e.k] = o))
+        } else S ? ((u[c] = o), m(c) && (d[c] = o)) : O && ((c.value = o), e.k && (u[e.k] = o))
       }
       if (o) {
         const N = () => {
@@ -1500,9 +1500,9 @@ const Qe =
   Go = Qe('m'),
   Ko = Qe('bu'),
   Wo = Qe('u'),
-  qo = Qe('bum'),
+  ko = Qe('bum'),
   ei = Qe('um'),
-  ko = Qe('sp'),
+  qo = Qe('sp'),
   $o = Qe('rtg'),
   Jo = Qe('rtc')
 function zo(e, t = le) {
@@ -1550,7 +1550,7 @@ const Jn = (e) => (e ? (Ei(e) ? Rs(e) : Jn(e.parent)) : null),
     $nextTick: (e) => e.n || (e.n = Kr.bind(e.proxy)),
     $watch: (e) => Do.bind(e),
   }),
-  Ln = (e, t) => e !== X && !e.__isScriptSetup && k(e, t),
+  Ln = (e, t) => e !== X && !e.__isScriptSetup && q(e, t),
   el = {
     get({ _: e }, t) {
       if (t === '__v_skip') return !0
@@ -1570,9 +1570,9 @@ const Jn = (e) => (e ? (Ei(e) ? Rs(e) : Jn(e.parent)) : null),
           }
         else {
           if (Ln(s, t)) return ((o[t] = 1), s[t])
-          if (r !== X && k(r, t)) return ((o[t] = 2), r[t])
-          if (k(i, t)) return ((o[t] = 3), i[t])
-          if (n !== X && k(n, t)) return ((o[t] = 4), n[t])
+          if (r !== X && q(r, t)) return ((o[t] = 2), r[t])
+          if (q(i, t)) return ((o[t] = 3), i[t])
+          if (n !== X && q(n, t)) return ((o[t] = 4), n[t])
           zn && (o[t] = 0)
         }
       }
@@ -1580,16 +1580,16 @@ const Jn = (e) => (e ? (Ei(e) ? Rs(e) : Jn(e.parent)) : null),
       let u, d
       if (h) return (t === '$attrs' && oe(e.attrs, 'get', ''), h(e))
       if ((u = l.__cssModules) && (u = u[t])) return u
-      if (n !== X && k(n, t)) return ((o[t] = 4), n[t])
-      if (((d = c.config.globalProperties), k(d, t))) return d[t]
+      if (n !== X && q(n, t)) return ((o[t] = 4), n[t])
+      if (((d = c.config.globalProperties), q(d, t))) return d[t]
     },
     set({ _: e }, t, n) {
       const { data: s, setupState: r, ctx: i } = e
       return Ln(r, t)
         ? ((r[t] = n), !0)
-        : s !== X && k(s, t)
+        : s !== X && q(s, t)
           ? ((s[t] = n), !0)
-          : k(e.props, t) || (t[0] === '$' && t.slice(1) in e)
+          : q(e.props, t) || (t[0] === '$' && t.slice(1) in e)
             ? !1
             : ((i[t] = n), !0)
     },
@@ -1600,18 +1600,18 @@ const Jn = (e) => (e ? (Ei(e) ? Rs(e) : Jn(e.parent)) : null),
       let c
       return !!(
         n[l] ||
-        (e !== X && l[0] !== '$' && k(e, l)) ||
+        (e !== X && l[0] !== '$' && q(e, l)) ||
         Ln(t, l) ||
-        k(i, l) ||
-        k(s, l) ||
-        k(Wt, l) ||
-        k(r.config.globalProperties, l) ||
+        q(i, l) ||
+        q(s, l) ||
+        q(Wt, l) ||
+        q(r.config.globalProperties, l) ||
         ((c = o.__cssModules) && c[l])
       )
     },
     defineProperty(e, t, n) {
       return (
-        n.get != null ? (e._.accessCache[t] = 0) : k(n, 'value') && this.set(e, t, n.value, null),
+        n.get != null ? (e._.accessCache[t] = 0) : q(n, 'value') && this.set(e, t, n.value, null),
         Reflect.defineProperty(e, t, n)
       )
     },
@@ -1636,8 +1636,8 @@ function tl(e) {
     beforeMount: d,
     mounted: g,
     beforeUpdate: m,
-    updated: w,
-    activated: P,
+    updated: S,
+    activated: O,
     deactivated: j,
     beforeDestroy: N,
     beforeUnmount: T,
@@ -1691,15 +1691,15 @@ function tl(e) {
     (se(Uo, d),
     se(Go, g),
     se(Ko, m),
-    se(Wo, w),
-    se(Bo, P),
+    se(Wo, S),
+    se(Bo, O),
     se(Vo, j),
     se(zo, Oe),
     se(Jo, ie),
     se($o, Z),
-    se(qo, T),
+    se(ko, T),
     se(ei, I),
-    se(ko, Ye),
+    se(qo, Ye),
     V(Pe))
   )
     if (Pe.length) {
@@ -1721,9 +1721,9 @@ function nl(e, t, n = Ve) {
     let i
     ;(te(r)
       ? 'default' in r
-        ? (i = ke(r.from || s, r.default, !0))
-        : (i = ke(r.from || s))
-      : (i = ke(r)),
+        ? (i = qe(r.from || s, r.default, !0))
+        : (i = qe(r.from || s))
+      : (i = qe(r)),
       ce(i)
         ? Object.defineProperty(t, s, {
             enumerable: !0,
@@ -1950,7 +1950,7 @@ function fl(e, t, ...n) {
   let r = n
   const i = t.startsWith('update:'),
     o = i && cl(s, t.slice(7))
-  o && (o.trim && (r = n.map((u) => (re(u) ? u.trim() : u))), o.number && (r = n.map(qi)))
+  o && (o.trim && (r = n.map((u) => (re(u) ? u.trim() : u))), o.number && (r = n.map(ki)))
   let l,
     c = s[(l = Tn(t))] || s[(l = Tn(xe(t)))]
   ;(!c && i && (c = s[(l = Tn(mt(t)))]), c && je(c, e, 6, r))
@@ -1986,7 +1986,7 @@ function wn(e, t) {
   return !e || !yn(t)
     ? !1
     : ((t = t.slice(2).replace(/Once$/, '')),
-      k(e, t[0].toLowerCase() + t.slice(1)) || k(e, mt(t)) || k(e, t))
+      q(e, t[0].toLowerCase() + t.slice(1)) || q(e, mt(t)) || q(e, t))
 }
 function Vs(e) {
   const {
@@ -2003,8 +2003,8 @@ function Vs(e) {
       props: d,
       data: g,
       setupState: m,
-      ctx: w,
-      inheritAttrs: P,
+      ctx: S,
+      inheritAttrs: O,
     } = e,
     j = hn(e)
   let N, T
@@ -2012,17 +2012,17 @@ function Vs(e) {
     if (n.shapeFlag & 4) {
       const I = r || s,
         z = I
-      ;((N = Be(h.call(z, I, u, d, m, g, w))), (T = l))
+      ;((N = Be(h.call(z, I, u, d, m, g, S))), (T = l))
     } else {
       const I = t
       ;((N = Be(I.length > 1 ? I(d, { attrs: l, slots: o, emit: c }) : I(d, null))),
         (T = t.props ? l : al(l)))
     }
   } catch (I) {
-    ;((qt.length = 0), Sn(I, e, 1), (N = he(ct)))
+    ;((kt.length = 0), Sn(I, e, 1), (N = he(ct)))
   }
   let L = N
-  if (T && P !== !1) {
+  if (T && O !== !1) {
     const I = Object.keys(T),
       { shapeFlag: z } = L
     I.length && z & 7 && (i && I.some(is) && (T = dl(T, i)), (L = Ot(L, T, !1, !0)))
@@ -2097,7 +2097,7 @@ function ml(e, t, n, s) {
       attrs: i,
       vnode: { patchFlag: o },
     } = e,
-    l = q(r),
+    l = k(r),
     [c] = e.propsOptions
   let h = !1
   if ((s || o > 0) && !(o & 16)) {
@@ -2108,10 +2108,10 @@ function ml(e, t, n, s) {
         if (wn(e.emitsOptions, g)) continue
         const m = t[g]
         if (c)
-          if (k(i, g)) m !== i[g] && ((i[g] = m), (h = !0))
+          if (q(i, g)) m !== i[g] && ((i[g] = m), (h = !0))
           else {
-            const w = xe(g)
-            r[w] = Yn(c, l, w, m, e, !1)
+            const S = xe(g)
+            r[S] = Yn(c, l, S, m, e, !1)
           }
         else m !== i[g] && ((i[g] = m), (h = !0))
       }
@@ -2120,13 +2120,13 @@ function ml(e, t, n, s) {
     ci(e, t, r, i) && (h = !0)
     let u
     for (const d in l)
-      (!t || (!k(t, d) && ((u = mt(d)) === d || !k(t, u)))) &&
+      (!t || (!q(t, d) && ((u = mt(d)) === d || !q(t, u)))) &&
         (c
           ? n && (n[d] !== void 0 || n[u] !== void 0) && (r[d] = Yn(c, l, d, void 0, e, !0))
           : delete r[d])
-    if (i !== l) for (const d in i) (!t || !k(t, d)) && (delete i[d], (h = !0))
+    if (i !== l) for (const d in i) (!t || !q(t, d)) && (delete i[d], (h = !0))
   }
-  h && qe(e.attrs, 'set', '')
+  h && ke(e.attrs, 'set', '')
 }
 function ci(e, t, n, s) {
   const [r, i] = e.propsOptions
@@ -2137,18 +2137,18 @@ function ci(e, t, n, s) {
       if (Vt(c)) continue
       const h = t[c]
       let u
-      r && k(r, (u = xe(c)))
+      r && q(r, (u = xe(c)))
         ? !i || !i.includes(u)
           ? (n[u] = h)
           : ((l || (l = {}))[u] = h)
         : wn(e.emitsOptions, c) || ((!(c in s) || h !== s[c]) && ((s[c] = h), (o = !0)))
     }
   if (i) {
-    const c = q(n),
+    const c = k(n),
       h = l || X
     for (let u = 0; u < i.length; u++) {
       const d = i[u]
-      n[d] = Yn(r, c, d, h[d], e, !k(h, d))
+      n[d] = Yn(r, c, d, h[d], e, !q(h, d))
     }
   }
   return o
@@ -2156,7 +2156,7 @@ function ci(e, t, n, s) {
 function Yn(e, t, n, s, r, i) {
   const o = e[n]
   if (o != null) {
-    const l = k(o, 'default')
+    const l = q(o, 'default')
     if (l && s === void 0) {
       const c = o.default
       if (o.type !== Function && !o.skipFactory && B(c)) {
@@ -2204,20 +2204,20 @@ function fi(e, t, n = !1) {
       if (Us(d)) {
         const g = i[u],
           m = (o[d] = V(g) || B(g) ? { type: g } : fe({}, g)),
-          w = m.type
-        let P = !1,
+          S = m.type
+        let O = !1,
           j = !0
-        if (V(w))
-          for (let N = 0; N < w.length; ++N) {
-            const T = w[N],
+        if (V(S))
+          for (let N = 0; N < S.length; ++N) {
+            const T = S[N],
               L = B(T) && T.name
             if (L === 'Boolean') {
-              P = !0
+              O = !0
               break
             } else L === 'String' && (j = !1)
           }
-        else P = B(w) && w.name === 'Boolean'
-        ;((m[0] = P), (m[1] = j), (P || k(m, 'default')) && l.push(d))
+        else O = B(S) && S.name === 'Boolean'
+        ;((m[0] = O), (m[1] = j), (O || q(m, 'default')) && l.push(d))
       }
     }
   const h = [o, l]
@@ -2288,13 +2288,13 @@ function xl(e, t) {
       parentNode: d,
       nextSibling: g,
       setScopeId: m = Ve,
-      insertStaticContent: w,
+      insertStaticContent: S,
     } = e,
-    P = (f, a, p, _ = null, b = null, v = null, A = void 0, R = null, x = !!a.dynamicChildren) => {
+    O = (f, a, p, _ = null, b = null, v = null, A = void 0, R = null, x = !!a.dynamicChildren) => {
       if (f === a) return
       ;(f && !Lt(f, a) && ((_ = y(f)), pe(f, b, v, !0), (f = null)),
         a.patchFlag === -2 && ((x = !1), (a.dynamicChildren = null)))
-      const { type: E, ref: F, shapeFlag: C } = a
+      const { type: E, ref: F, shapeFlag: w } = a
       switch (E) {
         case On:
           j(f, a, p, _)
@@ -2309,11 +2309,11 @@ function xl(e, t) {
           ft(f, a, p, _, b, v, A, R, x)
           break
         default:
-          C & 1
+          w & 1
             ? z(f, a, p, _, b, v, A, R, x)
-            : C & 6
+            : w & 6
               ? Te(f, a, p, _, b, v, A, R, x)
-              : (C & 64 || C & 128) && E.process(f, a, p, _, b, v, A, R, x, M)
+              : (w & 64 || w & 128) && E.process(f, a, p, _, b, v, A, R, x, M)
       }
       F != null && b
         ? Gt(F, f && f.ref, v, a || f, !a)
@@ -2330,7 +2330,7 @@ function xl(e, t) {
       f == null ? s((a.el = c(a.children || '')), p, _) : (a.el = f.el)
     },
     T = (f, a, p, _) => {
-      ;[f.el, f.anchor] = w(f.children, a, p, _, f.el, f.anchor)
+      ;[f.el, f.anchor] = S(f.children, a, p, _, f.el, f.anchor)
     },
     L = ({ el: f, anchor: a }, p, _) => {
       let b
@@ -2356,10 +2356,10 @@ function xl(e, t) {
     },
     ie = (f, a, p, _, b, v, A, R) => {
       let x, E
-      const { props: F, shapeFlag: C, transition: D, dirs: H } = f
+      const { props: F, shapeFlag: w, transition: D, dirs: H } = f
       if (
         ((x = f.el = o(f.type, v, F && F.is, F)),
-        C & 8 ? u(x, f.children) : C & 16 && Oe(f.children, x, null, _, b, Fn(f, v), A, R),
+        w & 8 ? u(x, f.children) : w & 16 && Oe(f.children, x, null, _, b, Fn(f, v), A, R),
         H && at(f, null, _, 'created'),
         Z(x, f, f.scopeId, A, _),
         F)
@@ -2390,14 +2390,14 @@ function xl(e, t) {
     Oe = (f, a, p, _, b, v, A, R, x = 0) => {
       for (let E = x; E < f.length; E++) {
         const F = (f[E] = R ? st(f[E]) : Be(f[E]))
-        P(null, F, a, p, _, b, v, A, R)
+        O(null, F, a, p, _, b, v, A, R)
       }
     },
     Ye = (f, a, p, _, b, v, A) => {
       const R = (a.el = f.el)
       let { patchFlag: x, dynamicChildren: E, dirs: F } = a
       x |= f.patchFlag & 16
-      const C = f.props || X,
+      const w = f.props || X,
         D = a.props || X
       let H
       if (
@@ -2405,29 +2405,29 @@ function xl(e, t) {
         (H = D.onVnodeBeforeUpdate) && Le(H, p, a, f),
         F && at(a, f, p, 'beforeUpdate'),
         p && dt(p, !0),
-        ((C.innerHTML && D.innerHTML == null) || (C.textContent && D.textContent == null)) &&
+        ((w.innerHTML && D.innerHTML == null) || (w.textContent && D.textContent == null)) &&
           u(R, ''),
         E
           ? Pe(f.dynamicChildren, E, R, p, _, Fn(a, b), v)
           : A || K(f, a, R, null, p, _, Fn(a, b), v, !1),
         x > 0)
       ) {
-        if (x & 16) Xe(R, C, D, p, b)
+        if (x & 16) Xe(R, w, D, p, b)
         else if (
-          (x & 2 && C.class !== D.class && i(R, 'class', null, D.class, b),
-          x & 4 && i(R, 'style', C.style, D.style, b),
+          (x & 2 && w.class !== D.class && i(R, 'class', null, D.class, b),
+          x & 4 && i(R, 'style', w.style, D.style, b),
           x & 8)
         ) {
           const G = a.dynamicProps
           for (let Q = 0; Q < G.length; Q++) {
             const $ = G[Q],
-              ge = C[$],
+              ge = w[$],
               me = D[$]
             ;(me !== ge || $ === 'value') && i(R, $, ge, me, b, p)
           }
         }
         x & 1 && f.children !== a.children && u(R, a.children)
-      } else !A && E == null && Xe(R, C, D, p, b)
+      } else !A && E == null && Xe(R, w, D, p, b)
       ;((H = D.onVnodeUpdated) || F) &&
         ye(() => {
           ;(H && Le(H, p, a, f), F && at(a, f, p, 'updated'))
@@ -2438,7 +2438,7 @@ function xl(e, t) {
         const x = f[R],
           E = a[R],
           F = x.el && (x.type === He || !Lt(x, E) || x.shapeFlag & 198) ? d(x.el) : p
-        P(x, E, F, null, _, b, v, A, !0)
+        O(x, E, F, null, _, b, v, A, !0)
       }
     },
     Xe = (f, a, p, _, b) => {
@@ -2456,11 +2456,11 @@ function xl(e, t) {
     ft = (f, a, p, _, b, v, A, R, x) => {
       const E = (a.el = f ? f.el : l('')),
         F = (a.anchor = f ? f.anchor : l(''))
-      let { patchFlag: C, dynamicChildren: D, slotScopeIds: H } = a
+      let { patchFlag: w, dynamicChildren: D, slotScopeIds: H } = a
       ;(H && (R = R ? R.concat(H) : H),
         f == null
           ? (s(E, p, _), s(F, p, _), Oe(a.children || [], p, F, b, v, A, R, x))
-          : C > 0 && C & 64 && D && f.dynamicChildren && f.dynamicChildren.length === D.length
+          : w > 0 && w & 64 && D && f.dynamicChildren && f.dynamicChildren.length === D.length
             ? (Pe(f.dynamicChildren, D, p, b, v, A, R),
               (a.key != null || (b && a === b.subTree)) && hi(f, a, !0))
             : K(f, a, p, F, b, v, A, R, x))
@@ -2494,46 +2494,46 @@ function xl(e, t) {
     se = (f, a, p, _, b, v, A) => {
       const R = () => {
         if (f.isMounted) {
-          let { next: C, bu: D, u: H, parent: G, vnode: Q } = f
+          let { next: w, bu: D, u: H, parent: G, vnode: Q } = f
           {
             const Me = pi(f)
             if (Me) {
-              ;(C && ((C.el = Q.el), J(f, C, A)),
+              ;(w && ((w.el = Q.el), J(f, w, A)),
                 Me.asyncDep.then(() => {
                   f.isUnmounted || R()
                 }))
               return
             }
           }
-          let $ = C,
+          let $ = w,
             ge
           ;(dt(f, !1),
-            C ? ((C.el = Q.el), J(f, C, A)) : (C = Q),
+            w ? ((w.el = Q.el), J(f, w, A)) : (w = Q),
             D && In(D),
-            (ge = C.props && C.props.onVnodeBeforeUpdate) && Le(ge, G, C, Q),
+            (ge = w.props && w.props.onVnodeBeforeUpdate) && Le(ge, G, w, Q),
             dt(f, !0))
           const me = Vs(f),
             Ne = f.subTree
           ;((f.subTree = me),
-            P(Ne, me, d(Ne.el), y(Ne), f, b, v),
-            (C.el = me.el),
+            O(Ne, me, d(Ne.el), y(Ne), f, b, v),
+            (w.el = me.el),
             $ === null && pl(f, me.el),
             H && ye(H, b),
-            (ge = C.props && C.props.onVnodeUpdated) && ye(() => Le(ge, G, C, Q), b))
+            (ge = w.props && w.props.onVnodeUpdated) && ye(() => Le(ge, G, w, Q), b))
         } else {
-          let C
+          let w
           const { el: D, props: H } = a,
             { bm: G, m: Q, parent: $, root: ge, type: me } = f,
             Ne = Kt(a)
-          ;(dt(f, !1), G && In(G), !Ne && (C = H && H.onVnodeBeforeMount) && Le(C, $, a), dt(f, !0))
+          ;(dt(f, !1), G && In(G), !Ne && (w = H && H.onVnodeBeforeMount) && Le(w, $, a), dt(f, !0))
           {
             ge.ce && ge.ce._def.shadowRoot !== !1 && ge.ce._injectChildStyle(me)
             const Me = (f.subTree = Vs(f))
-            ;(P(null, Me, p, _, f, b, v), (a.el = Me.el))
+            ;(O(null, Me, p, _, f, b, v), (a.el = Me.el))
           }
-          if ((Q && ye(Q, b), !Ne && (C = H && H.onVnodeMounted))) {
+          if ((Q && ye(Q, b), !Ne && (w = H && H.onVnodeMounted))) {
             const Me = a
-            ye(() => Le(C, $, Me), b)
+            ye(() => Le(w, $, Me), b)
           }
           ;((a.shapeFlag & 256 || ($ && Kt($.vnode) && $.vnode.shapeFlag & 256)) &&
             f.a &&
@@ -2563,63 +2563,63 @@ function xl(e, t) {
     K = (f, a, p, _, b, v, A, R, x = !1) => {
       const E = f && f.children,
         F = f ? f.shapeFlag : 0,
-        C = a.children,
+        w = a.children,
         { patchFlag: D, shapeFlag: H } = a
       if (D > 0) {
         if (D & 128) {
-          Ze(E, C, p, _, b, v, A, R, x)
+          Ze(E, w, p, _, b, v, A, R, x)
           return
         } else if (D & 256) {
-          Ue(E, C, p, _, b, v, A, R, x)
+          Ue(E, w, p, _, b, v, A, R, x)
           return
         }
       }
       H & 8
-        ? (F & 16 && Ee(E, b, v), C !== E && u(p, C))
+        ? (F & 16 && Ee(E, b, v), w !== E && u(p, w))
         : F & 16
           ? H & 16
-            ? Ze(E, C, p, _, b, v, A, R, x)
+            ? Ze(E, w, p, _, b, v, A, R, x)
             : Ee(E, b, v, !0)
-          : (F & 8 && u(p, ''), H & 16 && Oe(C, p, _, b, v, A, R, x))
+          : (F & 8 && u(p, ''), H & 16 && Oe(w, p, _, b, v, A, R, x))
     },
     Ue = (f, a, p, _, b, v, A, R, x) => {
       ;((f = f || Rt), (a = a || Rt))
       const E = f.length,
         F = a.length,
-        C = Math.min(E, F)
+        w = Math.min(E, F)
       let D
-      for (D = 0; D < C; D++) {
+      for (D = 0; D < w; D++) {
         const H = (a[D] = x ? st(a[D]) : Be(a[D]))
-        P(f[D], H, p, null, b, v, A, R, x)
+        O(f[D], H, p, null, b, v, A, R, x)
       }
-      E > F ? Ee(f, b, v, !0, !1, C) : Oe(a, p, _, b, v, A, R, x, C)
+      E > F ? Ee(f, b, v, !0, !1, w) : Oe(a, p, _, b, v, A, R, x, w)
     },
     Ze = (f, a, p, _, b, v, A, R, x) => {
       let E = 0
       const F = a.length
-      let C = f.length - 1,
+      let w = f.length - 1,
         D = F - 1
-      for (; E <= C && E <= D; ) {
+      for (; E <= w && E <= D; ) {
         const H = f[E],
           G = (a[E] = x ? st(a[E]) : Be(a[E]))
-        if (Lt(H, G)) P(H, G, p, null, b, v, A, R, x)
+        if (Lt(H, G)) O(H, G, p, null, b, v, A, R, x)
         else break
         E++
       }
-      for (; E <= C && E <= D; ) {
-        const H = f[C],
+      for (; E <= w && E <= D; ) {
+        const H = f[w],
           G = (a[D] = x ? st(a[D]) : Be(a[D]))
-        if (Lt(H, G)) P(H, G, p, null, b, v, A, R, x)
+        if (Lt(H, G)) O(H, G, p, null, b, v, A, R, x)
         else break
-        ;(C--, D--)
+        ;(w--, D--)
       }
-      if (E > C) {
+      if (E > w) {
         if (E <= D) {
           const H = D + 1,
             G = H < F ? a[H].el : _
-          for (; E <= D; ) (P(null, (a[E] = x ? st(a[E]) : Be(a[E])), p, G, b, v, A, R, x), E++)
+          for (; E <= D; ) (O(null, (a[E] = x ? st(a[E]) : Be(a[E])), p, G, b, v, A, R, x), E++)
         }
-      } else if (E > D) for (; E <= C; ) (pe(f[E], b, v, !0), E++)
+      } else if (E > D) for (; E <= w; ) (pe(f[E], b, v, !0), E++)
       else {
         const H = E,
           G = E,
@@ -2635,7 +2635,7 @@ function xl(e, t) {
           Me = 0
         const Mt = new Array(me)
         for (E = 0; E < me; E++) Mt[E] = 0
-        for (E = H; E <= C; E++) {
+        for (E = H; E <= w; E++) {
           const ve = f[E]
           if (ge >= me) {
             pe(ve, b, v, !0)
@@ -2653,7 +2653,7 @@ function xl(e, t) {
             ? pe(ve, b, v, !0)
             : ((Mt[De - G] = E + 1),
               De >= Me ? (Me = De) : (Ne = !0),
-              P(ve, a[De], p, null, b, v, A, R, x),
+              O(ve, a[De], p, null, b, v, A, R, x),
               ge++)
         }
         const Cs = Ne ? Al(Mt) : Rt
@@ -2663,7 +2663,7 @@ function xl(e, t) {
             ws = a[ve + 1],
             Os = ve + 1 < F ? ws.el || gi(ws) : _
           Mt[E] === 0
-            ? P(null, De, p, Os, b, v, A, R, x)
+            ? O(null, De, p, Os, b, v, A, R, x)
             : Ne && ($ < 0 || E !== Cs[$] ? Ie(De, p, Os, 2) : $--)
         }
       }
@@ -2684,7 +2684,7 @@ function xl(e, t) {
       }
       if (A === He) {
         s(v, a, p)
-        for (let C = 0; C < x.length; C++) Ie(x[C], a, p, _)
+        for (let w = 0; w < x.length; w++) Ie(x[w], a, p, _)
         s(f.anchor, a, p)
         return
       }
@@ -2695,13 +2695,13 @@ function xl(e, t) {
       if (_ !== 2 && E & 1 && R)
         if (_ === 0) (R.beforeEnter(v), s(v, a, p), ye(() => R.enter(v), b))
         else {
-          const { leave: C, delayLeave: D, afterLeave: H } = R,
+          const { leave: w, delayLeave: D, afterLeave: H } = R,
             G = () => {
               f.ctx.isUnmounted ? r(v) : s(v, a, p)
             },
             Q = () => {
               ;(v._isLeaving && v[Ho](!0),
-                C(v, () => {
+                w(v, () => {
                   ;(G(), H && H())
                 }))
             }
@@ -2717,12 +2717,12 @@ function xl(e, t) {
         children: x,
         dynamicChildren: E,
         shapeFlag: F,
-        patchFlag: C,
+        patchFlag: w,
         dirs: D,
         cacheIndex: H,
       } = f
       if (
-        (C === -2 && (b = !1),
+        (w === -2 && (b = !1),
         R != null && ($e(), Gt(R, null, p, f, !0), Je()),
         H != null && (a.renderCache[H] = void 0),
         F & 256)
@@ -2742,9 +2742,9 @@ function xl(e, t) {
         ;(G && at(f, null, a, 'beforeUnmount'),
           F & 64
             ? f.type.remove(f, a, p, M, _)
-            : E && !E.hasOnce && (v !== He || (C > 0 && C & 64))
+            : E && !E.hasOnce && (v !== He || (w > 0 && w & 64))
               ? Ee(E, a, p, !1, !0)
-              : ((v === He && C & 384) || (!b && F & 16)) && Ee(x, a, p),
+              : ((v === He && w & 384) || (!b && F & 16)) && Ee(x, a, p),
           _ && vt(f))
       }
       ;((Q && ($ = A && A.onVnodeUnmounted)) || G) &&
@@ -2798,17 +2798,17 @@ function xl(e, t) {
         p = a && a[Lo]
       return p ? g(p) : a
     }
-  let O = !1
-  const S = (f, a, p) => {
+  let P = !1
+  const C = (f, a, p) => {
       let _
       ;(f == null
         ? a._vnode && (pe(a._vnode, null, null, !0), (_ = a._vnode.component))
-        : P(a._vnode || null, f, a, null, null, null, p),
+        : O(a._vnode || null, f, a, null, null, null, p),
         (a._vnode = f),
-        O || ((O = !0), Ns(_), qr(), (O = !1)))
+        P || ((P = !0), Ns(_), kr(), (P = !1)))
     },
-    M = { p: P, um: pe, m: Ie, r: vt, mt: Nt, mc: Oe, pc: K, pbc: Pe, n: y, o: e }
-  return { render: S, hydrate: void 0, createApp: ll(S) }
+    M = { p: O, um: pe, m: Ie, r: vt, mt: Nt, mc: Oe, pc: K, pbc: Pe, n: y, o: e }
+  return { render: C, hydrate: void 0, createApp: ll(C) }
 }
 function Fn({ type: e, props: t }, n) {
   return (n === 'svg' && e === 'foreignObject') ||
@@ -2878,13 +2878,13 @@ const He = Symbol.for('v-fgt'),
   On = Symbol.for('v-txt'),
   ct = Symbol.for('v-cmt'),
   cn = Symbol.for('v-stc'),
-  qt = []
+  kt = []
 let be = null
 function _i(e = !1) {
-  qt.push((be = e ? null : []))
+  kt.push((be = e ? null : []))
 }
 function Cl() {
-  ;(qt.pop(), (be = qt[qt.length - 1] || null))
+  ;(kt.pop(), (be = kt[kt.length - 1] || null))
 }
 let Yt = 1
 function mn(e, t = !1) {
@@ -3008,11 +3008,11 @@ function Ot(e, t, n = !1, s = !1) {
 function Il(e = ' ', t = 0) {
   return he(On, null, e, t)
 }
-function Nf(e, t) {
+function Mf(e, t) {
   const n = he(cn, null, e)
   return ((n.staticCount = t), n)
 }
-function Mf(e = '', t = !1) {
+function Df(e = '', t = !1) {
   return t ? (_i(), Ol(ct, null, e)) : he(ct, null, e)
 }
 function Be(e) {
@@ -3278,17 +3278,17 @@ function Ri(e, t, n) {
 }
 const Kl = '3.5.26'
 let Zn
-const qs = typeof window < 'u' && window.trustedTypes
-if (qs)
+const ks = typeof window < 'u' && window.trustedTypes
+if (ks)
   try {
-    Zn = qs.createPolicy('vue', { createHTML: (e) => e })
+    Zn = ks.createPolicy('vue', { createHTML: (e) => e })
   } catch {}
 const Ai = Zn ? (e) => Zn.createHTML(e) : (e) => e,
   Wl = 'http://www.w3.org/2000/svg',
-  ql = 'http://www.w3.org/1998/Math/MathML',
+  kl = 'http://www.w3.org/1998/Math/MathML',
   We = typeof document < 'u' ? document : null,
-  ks = We && We.createElement('template'),
-  kl = {
+  qs = We && We.createElement('template'),
+  ql = {
     insert: (e, t, n) => {
       t.insertBefore(e, n || null)
     },
@@ -3301,7 +3301,7 @@ const Ai = Zn ? (e) => Zn.createHTML(e) : (e) => e,
         t === 'svg'
           ? We.createElementNS(Wl, e)
           : t === 'mathml'
-            ? We.createElementNS(ql, e)
+            ? We.createElementNS(kl, e)
             : n
               ? We.createElement(e, { is: n })
               : We.createElement(e)
@@ -3329,10 +3329,10 @@ const Ai = Zn ? (e) => Zn.createHTML(e) : (e) => e,
       if (r && (r === i || r.nextSibling))
         for (; t.insertBefore(r.cloneNode(!0), n), !(r === i || !(r = r.nextSibling)); );
       else {
-        ks.innerHTML = Ai(
+        qs.innerHTML = Ai(
           s === 'svg' ? `<svg>${e}</svg>` : s === 'mathml' ? `<math>${e}</math>` : e,
         )
-        const l = ks.content
+        const l = qs.content
         if (s === 'svg' || s === 'mathml') {
           const c = l.firstChild
           for (; c.firstChild; ) l.appendChild(c.firstChild)
@@ -3537,7 +3537,7 @@ function fc(e, t, n, s) {
   }
   return tr(t) && re(n) ? !1 : t in e
 }
-const uc = fe({ patchProp: cc }, kl)
+const uc = fe({ patchProp: cc }, ql)
 let nr
 function ac() {
   return nr || (nr = El(uc))
@@ -3581,46 +3581,51 @@ function vc(e, t) {
 }
 const yc = gc(mc, [['render', vc]]),
   bc = 'modulepreload',
-  Ec = function (e) {
-    return '/' + e
+  Ec = function (e, t) {
+    return new URL(e, t).href
   },
   sr = {},
   rr = function (t, n, s) {
     let r = Promise.resolve()
     if (n && n.length > 0) {
-      let c = function (h) {
+      let h = function (u) {
         return Promise.all(
-          h.map((u) =>
-            Promise.resolve(u).then(
-              (d) => ({ status: 'fulfilled', value: d }),
-              (d) => ({ status: 'rejected', reason: d }),
+          u.map((d) =>
+            Promise.resolve(d).then(
+              (g) => ({ status: 'fulfilled', value: g }),
+              (g) => ({ status: 'rejected', reason: g }),
             ),
           ),
         )
       }
-      document.getElementsByTagName('link')
-      const o = document.querySelector('meta[property=csp-nonce]'),
-        l = o?.nonce || o?.getAttribute('nonce')
-      r = c(
-        n.map((h) => {
-          if (((h = Ec(h)), h in sr)) return
-          sr[h] = !0
-          const u = h.endsWith('.css'),
-            d = u ? '[rel="stylesheet"]' : ''
-          if (document.querySelector(`link[href="${h}"]${d}`)) return
-          const g = document.createElement('link')
+      const o = document.getElementsByTagName('link'),
+        l = document.querySelector('meta[property=csp-nonce]'),
+        c = l?.nonce || l?.getAttribute('nonce')
+      r = h(
+        n.map((u) => {
+          if (((u = Ec(u, s)), u in sr)) return
+          sr[u] = !0
+          const d = u.endsWith('.css'),
+            g = d ? '[rel="stylesheet"]' : ''
+          if (s)
+            for (let S = o.length - 1; S >= 0; S--) {
+              const O = o[S]
+              if (O.href === u && (!d || O.rel === 'stylesheet')) return
+            }
+          else if (document.querySelector(`link[href="${u}"]${g}`)) return
+          const m = document.createElement('link')
           if (
-            ((g.rel = u ? 'stylesheet' : bc),
-            u || (g.as = 'script'),
-            (g.crossOrigin = ''),
-            (g.href = h),
-            l && g.setAttribute('nonce', l),
-            document.head.appendChild(g),
-            u)
+            ((m.rel = d ? 'stylesheet' : bc),
+            d || (m.as = 'script'),
+            (m.crossOrigin = ''),
+            (m.href = u),
+            c && m.setAttribute('nonce', c),
+            document.head.appendChild(m),
+            d)
           )
-            return new Promise((m, w) => {
-              ;(g.addEventListener('load', m),
-                g.addEventListener('error', () => w(new Error(`Unable to preload CSS for ${h}`))))
+            return new Promise((S, O) => {
+              ;(m.addEventListener('load', S),
+                m.addEventListener('error', () => O(new Error(`Unable to preload CSS for ${u}`))))
             })
         }),
       )
@@ -3650,7 +3655,7 @@ function Vn(e, t) {
   }
   return n
 }
-const kt = () => {},
+const qt = () => {},
   we = Array.isArray
 function ir(e, t) {
   const n = {}
@@ -3806,7 +3811,7 @@ const Kc = /^[^#]+#/
 function Wc(e, t) {
   return e.replace(Kc, '#') + t
 }
-function qc(e, t) {
+function kc(e, t) {
   const n = document.documentElement.getBoundingClientRect(),
     s = e.getBoundingClientRect()
   return {
@@ -3816,7 +3821,7 @@ function qc(e, t) {
   }
 }
 const Pn = () => ({ left: window.scrollX, top: window.scrollY })
-function kc(e) {
+function qc(e) {
   let t
   if ('el' in e) {
     const n = e.el,
@@ -3828,7 +3833,7 @@ function kc(e) {
             : document.querySelector(n)
           : n
     if (!r) return
-    t = qc(r, e)
+    t = kc(r, e)
   } else t = e
   'scrollBehavior' in document.documentElement.style
     ? window.scrollTo(t)
@@ -4016,18 +4021,18 @@ function sf(e, t, n, s) {
     o = null
   const l = ({ state: g }) => {
     const m = Li(e, location),
-      w = n.value,
-      P = t.value
+      S = n.value,
+      O = t.value
     let j = 0
     if (g) {
-      if (((n.value = m), (t.value = g), o && o === w)) {
+      if (((n.value = m), (t.value = g), o && o === S)) {
         o = null
         return
       }
-      j = P ? g.position - P.position : 0
+      j = O ? g.position - O.position : 0
     } else s(m)
     r.forEach((N) => {
-      N(n.value, w, {
+      N(n.value, S, {
         delta: j,
         type: ts.pop,
         direction: j ? (j > 0 ? Un.forward : Un.back) : Un.unknown,
@@ -4040,8 +4045,8 @@ function sf(e, t, n, s) {
   function h(g) {
     r.push(g)
     const m = () => {
-      const w = r.indexOf(g)
-      w > -1 && r.splice(w, 1)
+      const S = r.indexOf(g)
+      S > -1 && r.splice(S, 1)
     }
     return (i.push(m), m)
   }
@@ -4268,24 +4273,24 @@ function hf(e, t) {
       if (g.type === pt.Static)
         (d || (r += '/'), (r += g.value.replace(df, '\\$&')), (m += ae.Static))
       else if (g.type === pt.Param) {
-        const { value: w, repeatable: P, optional: j, regexp: N } = g
-        i.push({ name: w, repeatable: P, optional: j })
+        const { value: S, repeatable: O, optional: j, regexp: N } = g
+        i.push({ name: S, repeatable: O, optional: j })
         const T = N || dr
         if (T !== dr) {
           m += ae.BonusCustomRegExp
           try {
             ;`${T}`
           } catch (I) {
-            throw new Error(`Invalid custom RegExp for param "${w}" (${T}): ` + I.message)
+            throw new Error(`Invalid custom RegExp for param "${S}" (${T}): ` + I.message)
           }
         }
-        let L = P ? `((?:${T})(?:/(?:${T}))*)` : `(${T})`
+        let L = O ? `((?:${T})(?:/(?:${T}))*)` : `(${T})`
         ;(d || (L = j && h.length < 2 ? `(?:/${L})` : '/' + L),
           j && (L += '?'),
           (r += L),
           (m += ae.Dynamic),
           j && (m += ae.BonusOptional),
-          P && (m += ae.BonusRepeatable),
+          O && (m += ae.BonusRepeatable),
           T === '.*' && (m += ae.BonusWildcard))
       }
       u.push(m)
@@ -4304,8 +4309,8 @@ function hf(e, t) {
     if (!u) return null
     for (let g = 1; g < u.length; g++) {
       const m = u[g] || '',
-        w = i[g - 1]
-      d[w.name] = m && w.repeatable ? m.split('/') : m
+        S = i[g - 1]
+      d[S.name] = m && S.repeatable ? m.split('/') : m
     }
     return d
   }
@@ -4317,16 +4322,16 @@ function hf(e, t) {
       for (const m of g)
         if (m.type === pt.Static) u += m.value
         else if (m.type === pt.Param) {
-          const { value: w, repeatable: P, optional: j } = m,
-            N = w in h ? h[w] : ''
-          if (we(N) && !P)
+          const { value: S, repeatable: O, optional: j } = m,
+            N = S in h ? h[S] : ''
+          if (we(N) && !O)
             throw new Error(
-              `Provided param "${w}" is an array but it is not repeatable (* or + modifiers)`,
+              `Provided param "${S}" is an array but it is not repeatable (* or + modifiers)`,
             )
           const T = we(N) ? N.join('/') : N
           if (!T)
             if (j) g.length < 2 && (u.endsWith('/') ? (u = u.slice(0, -1)) : (d = !0))
-            else throw new Error(`Missing required param "${w}"`)
+            else throw new Error(`Missing required param "${S}"`)
           u += T
         }
     }
@@ -4384,20 +4389,20 @@ function _f(e, t) {
     return s.get(d)
   }
   function i(d, g, m) {
-    const w = !m,
-      P = gr(d)
-    P.aliasOf = m && m.record
+    const S = !m,
+      O = gr(d)
+    O.aliasOf = m && m.record
     const j = ir(t, d),
-      N = [P]
+      N = [O]
     if ('alias' in d) {
       const I = typeof d.alias == 'string' ? [d.alias] : d.alias
       for (const z of I)
         N.push(
           gr(
-            W({}, P, {
-              components: m ? m.record.components : P.components,
+            W({}, O, {
+              components: m ? m.record.components : O.components,
               path: z,
-              aliasOf: m ? m.record : P,
+              aliasOf: m ? m.record : O,
             }),
           ),
         )
@@ -4414,11 +4419,11 @@ function _f(e, t) {
         ((T = mf(I, g, j)),
         m
           ? m.alias.push(T)
-          : ((L = L || T), L !== T && L.alias.push(T), w && d.name && !mr(T) && o(d.name)),
+          : ((L = L || T), L !== T && L.alias.push(T), S && d.name && !mr(T) && o(d.name)),
         Hi(T) && c(T),
-        P.children)
+        O.children)
       ) {
-        const ie = P.children
+        const ie = O.children
         for (let Z = 0; Z < ie.length; Z++) i(ie[Z], T, m && m.children[Z])
       }
       m = m || T
@@ -4427,7 +4432,7 @@ function _f(e, t) {
       ? () => {
           o(L)
         }
-      : kt
+      : qt
   }
   function o(d) {
     if (Ni(d)) {
@@ -4451,13 +4456,13 @@ function _f(e, t) {
   }
   function h(d, g) {
     let m,
-      w = {},
-      P,
+      S = {},
+      O,
       j
     if ('name' in d && d.name) {
       if (((m = s.get(d.name)), !m)) throw Tt(ee.MATCHER_NOT_FOUND, { location: d })
       ;((j = m.record.name),
-        (w = W(
+        (S = W(
           pr(
             g.params,
             m.keys
@@ -4471,20 +4476,20 @@ function _f(e, t) {
               m.keys.map((L) => L.name),
             ),
         )),
-        (P = m.stringify(w)))
+        (O = m.stringify(S)))
     } else if (d.path != null)
-      ((P = d.path),
-        (m = n.find((L) => L.re.test(P))),
-        m && ((w = m.parse(P)), (j = m.record.name)))
+      ((O = d.path),
+        (m = n.find((L) => L.re.test(O))),
+        m && ((S = m.parse(O)), (j = m.record.name)))
     else {
       if (((m = g.name ? s.get(g.name) : n.find((L) => L.re.test(g.path))), !m))
         throw Tt(ee.MATCHER_NOT_FOUND, { location: d, currentLocation: g })
-      ;((j = m.record.name), (w = W({}, g.params, d.params)), (P = m.stringify(w)))
+      ;((j = m.record.name), (S = W({}, g.params, d.params)), (O = m.stringify(S)))
     }
     const N = []
     let T = m
     for (; T; ) (N.unshift(T.record), (T = T.parent))
-    return { name: j, path: P, params: w, matched: N, meta: yf(N) }
+    return { name: j, path: O, params: S, matched: N, meta: yf(N) }
   }
   e.forEach((d) => i(d))
   function u() {
@@ -4557,8 +4562,8 @@ function Hi({ record: e }) {
   return !!(e.name || (e.components && Object.keys(e.components).length) || e.redirect)
 }
 function _r(e) {
-  const t = ke(Ss),
-    n = ke(Di),
+  const t = qe(Ss),
+    n = qe(Di),
     s = Re(() => {
       const c = St(e.to)
       return t.resolve(c)
@@ -4580,7 +4585,7 @@ function _r(e) {
     o = Re(() => r.value > -1 && r.value === n.matched.length - 1 && Ii(n.params, s.value.params))
   function l(c = {}) {
     if (Sf(c)) {
-      const h = t[St(e.replace) ? 'replace' : 'push'](St(e.to)).catch(kt)
+      const h = t[St(e.replace) ? 'replace' : 'push'](St(e.to)).catch(qt)
       return (
         e.viewTransition &&
           typeof document < 'u' &&
@@ -4611,7 +4616,7 @@ const Rf = Qr({
     useLink: _r,
     setup(e, { slots: t }) {
       const n = An(_r(e)),
-        { options: s } = ke(Ss),
+        { options: s } = qe(Ss),
         r = Re(() => ({
           [yr(e.activeClass, s.linkActiveClass, 'router-link-active')]: n.isActive,
           [yr(e.exactActiveClass, s.linkExactActiveClass, 'router-link-exact-active')]:
@@ -4669,9 +4674,9 @@ const yr = (e, t, n) => e ?? t ?? n,
     props: { name: { type: String, default: 'default' }, route: Object },
     compatConfig: { MODE: 3 },
     setup(e, { attrs: t, slots: n }) {
-      const s = ke(ss),
+      const s = qe(ss),
         r = Re(() => e.route || s.value),
-        i = ke(ur, 0),
+        i = qe(ur, 0),
         o = Re(() => {
           let h = St(i)
           const { matched: u } = r.value
@@ -4690,7 +4695,7 @@ const yr = (e, t, n) => e ?? t ?? n,
       return (
         ln(
           () => [c.value, l.value, e.name],
-          ([h, u, d], [g, m, w]) => {
+          ([h, u, d], [g, m, S]) => {
             ;(u &&
               ((u.instances[d] = h),
               m &&
@@ -4699,7 +4704,7 @@ const yr = (e, t, n) => e ?? t ?? n,
                 h === g &&
                 (u.leaveGuards.size || (u.leaveGuards = m.leaveGuards),
                 u.updateGuards.size || (u.updateGuards = m.updateGuards))),
-              h && u && (!m || !Pt(u, m) || !g) && (u.enterCallbacks[d] || []).forEach((P) => P(h)))
+              h && u && (!m || !Pt(u, m) || !g) && (u.enterCallbacks[d] || []).forEach((O) => O(h)))
           },
           { flush: 'post' },
         ),
@@ -4710,10 +4715,10 @@ const yr = (e, t, n) => e ?? t ?? n,
             g = d && d.components[u]
           if (!g) return br(n.default, { Component: g, route: h })
           const m = d.props[u],
-            w = m ? (m === !0 ? h.params : typeof m == 'function' ? m(h) : m) : null,
+            S = m ? (m === !0 ? h.params : typeof m == 'function' ? m(h) : m) : null,
             j = Ri(
               g,
-              W({}, w, t, {
+              W({}, S, t, {
                 onVnodeUnmounted: (N) => {
                   N.component.isUnmounted && (d.instances[u] = null)
                 },
@@ -4745,35 +4750,35 @@ function Pf(e) {
   const u = Vn.bind(null, (y) => '' + y),
     d = Vn.bind(null, Lc),
     g = Vn.bind(null, Zt)
-  function m(y, O) {
-    let S, M
-    return (Ni(y) ? ((S = t.getRecordMatcher(y)), (M = O)) : (M = y), t.addRoute(M, S))
+  function m(y, P) {
+    let C, M
+    return (Ni(y) ? ((C = t.getRecordMatcher(y)), (M = P)) : (M = y), t.addRoute(M, C))
   }
-  function w(y) {
-    const O = t.getRecordMatcher(y)
-    O && t.removeRoute(O)
+  function S(y) {
+    const P = t.getRecordMatcher(y)
+    P && t.removeRoute(P)
   }
-  function P() {
+  function O() {
     return t.getRoutes().map((y) => y.record)
   }
   function j(y) {
     return !!t.getRecordMatcher(y)
   }
-  function N(y, O) {
-    if (((O = W({}, O || c.value)), typeof y == 'string')) {
-      const p = jn(n, y, O.path),
-        _ = t.resolve({ path: p.path }, O),
+  function N(y, P) {
+    if (((P = W({}, P || c.value)), typeof y == 'string')) {
+      const p = jn(n, y, P.path),
+        _ = t.resolve({ path: p.path }, P),
         b = r.createHref(p.fullPath)
       return W(p, _, { params: g(_.params), hash: Zt(p.hash), redirectedFrom: void 0, href: b })
     }
-    let S
-    if (y.path != null) S = W({}, y, { path: jn(n, y.path, O.path).path })
+    let C
+    if (y.path != null) C = W({}, y, { path: jn(n, y.path, P.path).path })
     else {
       const p = W({}, y.params)
       for (const _ in p) p[_] == null && delete p[_]
-      ;((S = W({}, y, { params: d(p) })), (O.params = d(O.params)))
+      ;((C = W({}, y, { params: d(p) })), (P.params = d(P.params)))
     }
-    const M = t.resolve(S, O),
+    const M = t.resolve(C, P),
       U = y.hash || ''
     M.params = u(g(M.params))
     const f = Bc(s, W({}, y, { hash: Nc(U), path: M.path })),
@@ -4786,8 +4791,8 @@ function Pf(e) {
   function T(y) {
     return typeof y == 'string' ? jn(n, y, c.value.path) : W({}, y)
   }
-  function L(y, O) {
-    if (h !== y) return Tt(ee.NAVIGATION_CANCELLED, { from: O, to: y })
+  function L(y, P) {
+    if (h !== y) return Tt(ee.NAVIGATION_CANCELLED, { from: P, to: y })
   }
   function I(y) {
     return Z(y)
@@ -4795,11 +4800,11 @@ function Pf(e) {
   function z(y) {
     return I(W(T(y), { replace: !0 }))
   }
-  function ie(y, O) {
-    const S = y.matched[y.matched.length - 1]
-    if (S && S.redirect) {
-      const { redirect: M } = S
-      let U = typeof M == 'function' ? M(y, O) : M
+  function ie(y, P) {
+    const C = y.matched[y.matched.length - 1]
+    if (C && C.redirect) {
+      const { redirect: M } = C
+      let U = typeof M == 'function' ? M(y, P) : M
       return (
         typeof U == 'string' &&
           ((U = U.includes('?') || U.includes('#') ? (U = T(U)) : { path: U }), (U.params = {})),
@@ -4807,24 +4812,24 @@ function Pf(e) {
       )
     }
   }
-  function Z(y, O) {
-    const S = (h = N(y)),
+  function Z(y, P) {
+    const C = (h = N(y)),
       M = c.value,
       U = y.state,
       f = y.force,
       a = y.replace === !0,
-      p = ie(S, M)
+      p = ie(C, M)
     if (p)
       return Z(
         W(T(p), { state: typeof p == 'object' ? W({}, U, p.state) : U, force: f, replace: a }),
-        O || S,
+        P || C,
       )
-    const _ = S
-    _.redirectedFrom = O
+    const _ = C
+    _.redirectedFrom = P
     let b
     return (
       !f &&
-        Vc(s, M, S) &&
+        Vc(s, M, C) &&
         ((b = Tt(ee.NAVIGATION_DUPLICATED, { to: _, from: M })), Ie(M, M, !0, !1)),
       (b ? Promise.resolve(b) : Pe(_, M))
         .catch((v) => (Ke(v) ? (Ke(v, ee.NAVIGATION_GUARD_REDIRECT) ? v : Ze(v)) : K(v, _, M)))
@@ -4836,100 +4841,100 @@ function Pf(e) {
                   state: typeof v.to == 'object' ? W({}, U, v.to.state) : U,
                   force: f,
                 }),
-                O || _,
+                P || _,
               )
           } else v = ft(_, M, !0, a, U)
           return (Xe(_, M, v), v)
         })
     )
   }
-  function Oe(y, O) {
-    const S = L(y, O)
-    return S ? Promise.reject(S) : Promise.resolve()
+  function Oe(y, P) {
+    const C = L(y, P)
+    return C ? Promise.reject(C) : Promise.resolve()
   }
   function Ye(y) {
-    const O = yt.values().next().value
-    return O && typeof O.runWithContext == 'function' ? O.runWithContext(y) : y()
+    const P = yt.values().next().value
+    return P && typeof P.runWithContext == 'function' ? P.runWithContext(y) : y()
   }
-  function Pe(y, O) {
-    let S
-    const [M, U, f] = tf(y, O)
-    S = Gn(M.reverse(), 'beforeRouteLeave', y, O)
+  function Pe(y, P) {
+    let C
+    const [M, U, f] = tf(y, P)
+    C = Gn(M.reverse(), 'beforeRouteLeave', y, P)
     for (const p of M)
       p.leaveGuards.forEach((_) => {
-        S.push(rt(_, y, O))
+        C.push(rt(_, y, P))
       })
-    const a = Oe.bind(null, y, O)
+    const a = Oe.bind(null, y, P)
     return (
-      S.push(a),
-      Ee(S)
+      C.push(a),
+      Ee(C)
         .then(() => {
-          S = []
-          for (const p of i.list()) S.push(rt(p, y, O))
-          return (S.push(a), Ee(S))
+          C = []
+          for (const p of i.list()) C.push(rt(p, y, P))
+          return (C.push(a), Ee(C))
         })
         .then(() => {
-          S = Gn(U, 'beforeRouteUpdate', y, O)
+          C = Gn(U, 'beforeRouteUpdate', y, P)
           for (const p of U)
             p.updateGuards.forEach((_) => {
-              S.push(rt(_, y, O))
+              C.push(rt(_, y, P))
             })
-          return (S.push(a), Ee(S))
+          return (C.push(a), Ee(C))
         })
         .then(() => {
-          S = []
+          C = []
           for (const p of f)
             if (p.beforeEnter)
-              if (we(p.beforeEnter)) for (const _ of p.beforeEnter) S.push(rt(_, y, O))
-              else S.push(rt(p.beforeEnter, y, O))
-          return (S.push(a), Ee(S))
+              if (we(p.beforeEnter)) for (const _ of p.beforeEnter) C.push(rt(_, y, P))
+              else C.push(rt(p.beforeEnter, y, P))
+          return (C.push(a), Ee(C))
         })
         .then(
           () => (
             y.matched.forEach((p) => (p.enterCallbacks = {})),
-            (S = Gn(f, 'beforeRouteEnter', y, O, Ye)),
-            S.push(a),
-            Ee(S)
+            (C = Gn(f, 'beforeRouteEnter', y, P, Ye)),
+            C.push(a),
+            Ee(C)
           ),
         )
         .then(() => {
-          S = []
-          for (const p of o.list()) S.push(rt(p, y, O))
-          return (S.push(a), Ee(S))
+          C = []
+          for (const p of o.list()) C.push(rt(p, y, P))
+          return (C.push(a), Ee(C))
         })
         .catch((p) => (Ke(p, ee.NAVIGATION_CANCELLED) ? p : Promise.reject(p)))
     )
   }
-  function Xe(y, O, S) {
-    l.list().forEach((M) => Ye(() => M(y, O, S)))
+  function Xe(y, P, C) {
+    l.list().forEach((M) => Ye(() => M(y, P, C)))
   }
-  function ft(y, O, S, M, U) {
-    const f = L(y, O)
+  function ft(y, P, C, M, U) {
+    const f = L(y, P)
     if (f) return f
-    const a = O === et,
+    const a = P === et,
       p = xt ? history.state : {}
-    ;(S &&
+    ;(C &&
       (M || a
         ? r.replace(y.fullPath, W({ scroll: a && p && p.scroll }, U))
         : r.push(y.fullPath, U)),
       (c.value = y),
-      Ie(y, O, S, a),
+      Ie(y, P, C, a),
       Ze())
   }
   let Te
   function Nt() {
     Te ||
-      (Te = r.listen((y, O, S) => {
+      (Te = r.listen((y, P, C) => {
         if (!ut.listening) return
         const M = N(y),
           U = ie(M, ut.currentRoute.value)
         if (U) {
-          Z(W(U, { replace: !0, force: !0 }), M).catch(kt)
+          Z(W(U, { replace: !0, force: !0 }), M).catch(qt)
           return
         }
         h = M
         const f = c.value
-        ;(xt && $c(cr(f.fullPath, S.delta), Pn()),
+        ;(xt && $c(cr(f.fullPath, C.delta), Pn()),
           Pe(M, f)
             .catch((a) =>
               Ke(a, ee.NAVIGATION_ABORTED | ee.NAVIGATION_CANCELLED)
@@ -4938,54 +4943,54 @@ function Pf(e) {
                   ? (Z(W(T(a.to), { force: !0 }), M)
                       .then((p) => {
                         Ke(p, ee.NAVIGATION_ABORTED | ee.NAVIGATION_DUPLICATED) &&
-                          !S.delta &&
-                          S.type === ts.pop &&
+                          !C.delta &&
+                          C.type === ts.pop &&
                           r.go(-1, !1)
                       })
-                      .catch(kt),
+                      .catch(qt),
                     Promise.reject())
-                  : (S.delta && r.go(-S.delta, !1), K(a, M, f)),
+                  : (C.delta && r.go(-C.delta, !1), K(a, M, f)),
             )
             .then((a) => {
               ;((a = a || ft(M, f, !1)),
                 a &&
-                  (S.delta && !Ke(a, ee.NAVIGATION_CANCELLED)
-                    ? r.go(-S.delta, !1)
-                    : S.type === ts.pop &&
+                  (C.delta && !Ke(a, ee.NAVIGATION_CANCELLED)
+                    ? r.go(-C.delta, !1)
+                    : C.type === ts.pop &&
                       Ke(a, ee.NAVIGATION_ABORTED | ee.NAVIGATION_DUPLICATED) &&
                       r.go(-1, !1)),
                 Xe(M, f, a))
             })
-            .catch(kt))
+            .catch(qt))
       }))
   }
   let _t = Ft(),
     se = Ft(),
     J
-  function K(y, O, S) {
+  function K(y, P, C) {
     Ze(y)
     const M = se.list()
-    return (M.length ? M.forEach((U) => U(y, O, S)) : console.error(y), Promise.reject(y))
+    return (M.length ? M.forEach((U) => U(y, P, C)) : console.error(y), Promise.reject(y))
   }
   function Ue() {
     return J && c.value !== et
       ? Promise.resolve()
-      : new Promise((y, O) => {
-          _t.add([y, O])
+      : new Promise((y, P) => {
+          _t.add([y, P])
         })
   }
   function Ze(y) {
-    return (J || ((J = !y), Nt(), _t.list().forEach(([O, S]) => (y ? S(y) : O())), _t.reset()), y)
+    return (J || ((J = !y), Nt(), _t.list().forEach(([P, C]) => (y ? C(y) : P())), _t.reset()), y)
   }
-  function Ie(y, O, S, M) {
+  function Ie(y, P, C, M) {
     const { scrollBehavior: U } = e
     if (!xt || !U) return Promise.resolve()
     const f =
-      (!S && Jc(cr(y.fullPath, 0))) || ((M || !S) && history.state && history.state.scroll) || null
+      (!C && Jc(cr(y.fullPath, 0))) || ((M || !C) && history.state && history.state.scroll) || null
     return Kr()
-      .then(() => U(y, O, f))
-      .then((a) => a && kc(a))
-      .catch((a) => K(a, y, O))
+      .then(() => U(y, P, f))
+      .then((a) => a && qc(a))
+      .catch((a) => K(a, y, P))
   }
   const pe = (y) => r.go(y)
   let vt
@@ -4994,10 +4999,10 @@ function Pf(e) {
       currentRoute: c,
       listening: !0,
       addRoute: m,
-      removeRoute: w,
+      removeRoute: S,
       clearRoutes: t.clearRoutes,
       hasRoute: j,
-      getRoutes: P,
+      getRoutes: O,
       resolve: N,
       options: e,
       push: I,
@@ -5019,21 +5024,21 @@ function Pf(e) {
             get: () => St(c),
           }),
           xt && !vt && c.value === et && ((vt = !0), I(r.location).catch((M) => {})))
-        const O = {}
-        for (const M in et) Object.defineProperty(O, M, { get: () => c.value[M], enumerable: !0 })
-        ;(y.provide(Ss, ut), y.provide(Di, Vr(O)), y.provide(ss, c))
-        const S = y.unmount
+        const P = {}
+        for (const M in et) Object.defineProperty(P, M, { get: () => c.value[M], enumerable: !0 })
+        ;(y.provide(Ss, ut), y.provide(Di, Vr(P)), y.provide(ss, c))
+        const C = y.unmount
         ;(yt.add(y),
           (y.unmount = function () {
             ;(yt.delete(y),
               yt.size < 1 &&
                 ((h = et), Te && Te(), (Te = null), (c.value = et), (vt = !1), (J = !1)),
-              S())
+              C())
           }))
       },
     }
   function Ee(y) {
-    return y.reduce((O, S) => O.then(() => Ye(S)), Promise.resolve())
+    return y.reduce((P, C) => P.then(() => Ye(C)), Promise.resolve())
   }
   return ut
 }
@@ -5042,26 +5047,29 @@ const Tf = [
     {
       path: '/template1',
       name: 'Template1',
-      component: () => rr(() => import('./index.CjbndfYQ.js'), __vite__mapDeps([0, 1, 2, 3])),
+      component: () =>
+        rr(() => import('./index.r9c8mTV6.js'), __vite__mapDeps([0, 1, 2, 3]), import.meta.url),
     },
     {
       path: '/template2',
       name: 'Template2',
-      component: () => rr(() => import('./index.C3aBnMRy.js'), __vite__mapDeps([4, 1, 2, 5])),
+      component: () =>
+        rr(() => import('./index.W93CM3uL.js'), __vite__mapDeps([4, 1, 2, 5]), import.meta.url),
     },
   ],
-  If = Pf({ history: lf(), routes: Tf })
-dc(yc).use(If).mount('#app')
+  If = './',
+  Nf = Pf({ history: lf(If), routes: Tf })
+dc(yc).use(Nf).mount('#app')
 export {
   gc as _,
-  Nf as a,
+  Mf as a,
   bi as b,
   wl as c,
   he as d,
   Il as e,
   Qr as f,
   bo as g,
-  Mf as h,
+  Df as h,
   _i as o,
   Yo as r,
   Io as w,

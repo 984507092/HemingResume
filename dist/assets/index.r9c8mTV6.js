@@ -1,4 +1,4 @@
-import { p as n, s as f, w as p, e as r } from './educational.DGcpwyjM.js'
+import { p as n, s as f, w as p, e as r } from './educational.XE4rRfGC.js'
 import {
   _ as o,
   c as v,
@@ -10,7 +10,7 @@ import {
   o as i,
   e as k,
   f as m,
-} from './index.z6DNN6Qd.js'
+} from './index.CrF-Sq9q.js'
 const u = {},
   b = { class: 'company-project' },
   j = { class: 'company' },
