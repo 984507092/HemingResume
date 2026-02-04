@@ -1,23 +1,27 @@
-# 推 main 后自动构建并发布到 gh-pages 分支，解决 Pages 白屏
-# 发布后：Settings -> Pages -> Source 选 "Deploy from a branch" -> Branch 选 gh-pages -> /(root)
-name: Deploy to GitHub Pages
+# 与参考 workflow 一致：用官方 upload artifact + deploy-pages，不推分支，避免 403
+# 必须：Settings -> Pages -> Source 选 "GitHub Actions"
+name: Deploy Website to GitHub Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# 需要 contents: write 才能推送到 gh-pages 分支
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -47,10 +51,21 @@ jobs:
           grep -q '/HemingResume/assets/' dist/index.html || { echo "ERROR: missing /HemingResume/assets/"; exit 1; }
           echo "OK: build has correct base."
 
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          force_orphan: true
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -3,11 +3,11 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      './index.BmUCIZ-a.js',
-      './educational.B89NnOwD.js',
+      './index.D0j-oDI4.js',
+      './educational.Dzp1n40o.js',
       './educational.C1b2MjXg.css',
       './index.BJbYSw9h.css',
-      './index.BcKL_EYX.js',
+      './index.C-qbvnYn.js',
       './index.h3fyQTBv.css',
     ]),
 ) => i.map((i) => d[i])
@@ -3008,11 +3008,11 @@ function Ot(e, t, n = !1, s = !1) {
 function Il(e = ' ', t = 0) {
   return he(On, null, e, t)
 }
-function Mf(e, t) {
+function Nf(e, t) {
   const n = he(cn, null, e)
   return ((n.staticCount = t), n)
 }
-function Df(e = '', t = !1) {
+function Mf(e = '', t = !1) {
   return t ? (_i(), Ol(ct, null, e)) : he(ct, null, e)
 }
 function Be(e) {
@@ -5048,28 +5048,27 @@ const Tf = [
       path: '/template1',
       name: 'Template1',
       component: () =>
-        rr(() => import('./index.BmUCIZ-a.js'), __vite__mapDeps([0, 1, 2, 3]), import.meta.url),
+        rr(() => import('./index.D0j-oDI4.js'), __vite__mapDeps([0, 1, 2, 3]), import.meta.url),
     },
     {
       path: '/template2',
       name: 'Template2',
       component: () =>
-        rr(() => import('./index.BcKL_EYX.js'), __vite__mapDeps([4, 1, 2, 5]), import.meta.url),
+        rr(() => import('./index.C-qbvnYn.js'), __vite__mapDeps([4, 1, 2, 5]), import.meta.url),
     },
   ],
-  If = './',
-  Nf = Pf({ history: lf(If), routes: Tf })
-dc(yc).use(Nf).mount('#app')
+  If = Pf({ history: lf(), routes: Tf })
+dc(yc).use(If).mount('#app')
 export {
   gc as _,
-  Mf as a,
+  Nf as a,
   bi as b,
   wl as c,
   he as d,
   Il as e,
   Qr as f,
   bo as g,
-  Df as h,
+  Mf as h,
   _i as o,
   Yo as r,
   Io as w,

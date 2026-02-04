@@ -17,10 +17,8 @@ const routes: Array<RouteRecordRaw> = [
   },
 ]
 
-// 与 vite base 一致：相对路径 ./ 或绝对 /HemingResume/；GitHub Pages 无 SPA 回退，用 Hash 模式
-const base = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : ''
 const router = createRouter({
-  history: createWebHashHistory(base),
+  history: createWebHashHistory(),
   routes,
 })
 
