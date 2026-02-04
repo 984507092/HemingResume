@@ -1,22 +1,19 @@
-# 发布到 GitHub Pages（必须：Settings -> Pages -> Source 选 "GitHub Actions"）
+# 推 main 后自动构建并发布到 gh-pages 分支，解决 Pages 白屏
+# 发布后：Settings -> Pages -> Source 选 "Deploy from a branch" -> Branch 选 gh-pages -> /(root)
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
-  workflow_dispatch: # 支持在 Actions 页手动运行一次
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -37,40 +34,22 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
-          # 必须用绝对 base：无尾斜杠访问 .../HemingResume 时，相对路径 ./ 会解析到 github.io 根导致 404
           BASE_PATH: '/HemingResume/'
 
-      - name: Verify build output
+      - name: Verify build
         run: |
-          echo "=== dist/index.html script/link ==="
           grep -E 'src=|href=' dist/index.html || true
-          if grep -q 'main\.ts\|/src/' dist/index.html; then
-            echo "ERROR: dist/index.html still contains source paths; build base may be wrong."
+          if grep -E 'main\.ts|/src/' dist/index.html; then
+            echo "ERROR: dist still has source paths."
             exit 1
           fi
-          if ! grep -q '/HemingResume/assets/' dist/index.html; then
-            echo "ERROR: dist/index.html should contain /HemingResume/assets/ for deployment."
-            exit 1
-          fi
-          echo "Build output OK."
+          grep -q '/HemingResume/assets/' dist/index.html || { echo "ERROR: missing /HemingResume/assets/"; exit 1; }
+          echo "OK: build has correct base."
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-      - name: Deployment summary
-        run: |
-          echo "Deployed by workflow 'Deploy to GitHub Pages' (main branch)."
-          echo "If the site still shows /src/main.ts 404, set Settings -> Pages -> Source to 'GitHub Actions'."
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          force_orphan: true
