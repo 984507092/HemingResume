@@ -2,13 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
-// GitHub Pages 项目站点的 URL 为 https://<user>.github.io/<repo>/，必须使用绝对 base 否则会白屏
-const base = process.env.BASE_PATH ?? './'
-
 // https://vitejs.dev/config/
 export default defineConfig({
-  base,
-
   plugins: [vue()],
   resolve: {
     alias: {
