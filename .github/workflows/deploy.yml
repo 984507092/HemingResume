@@ -26,6 +26,9 @@ jobs:
 
       - name: Build
         run: pnpm run build
+        env:
+          # 与仓库名一致，GitHub Pages 访问路径为 https://<user>.github.io/HemingResume/
+          BASE_PATH: '/HemingResume/'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
