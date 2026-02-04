@@ -30,9 +30,16 @@ jobs:
           # 与仓库名一致，GitHub Pages 访问路径为 https://<user>.github.io/HemingResume/
           BASE_PATH: '/HemingResume/'
 
+      - name: Verify build output
+        run: |
+          echo "=== dist/index.html script/src ==="
+          grep -E 'src=|href=.*\.(js|css)' dist/index.html || true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: heming  # 和你设置一致
+          publish_branch: heming
+          # 每次用 dist 内容完全覆盖分支，避免残留源码导致白屏
+          force_orphan: true
