@@ -1,6 +1,4 @@
-# 与参考 workflow 一致：用官方 upload artifact + deploy-pages，不推分支，避免 403
-# 必须：Settings -> Pages -> Source 选 "GitHub Actions"
-name: Deploy Website to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -8,20 +6,13 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
+  contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -43,29 +34,27 @@ jobs:
 
       - name: Verify build
         run: |
-          grep -E 'src=|href=' dist/index.html || true
-          if grep -E 'main\.ts|/src/' dist/index.html; then
-            echo "ERROR: dist still has source paths."
+          echo "=== index.html 内容 ==="
+          cat dist/index.html
+          echo ""
+          echo "=== 检查构建结果 ==="
+          # 检查是否还有源码路径（构建失败的标志）
+          if grep -qE '\.ts["\x27]|/src/' dist/index.html; then
+            echo "❌ 错误: 发现未编译的源码路径"
             exit 1
           fi
-          grep -q '/HemingResume/assets/' dist/index.html || { echo "ERROR: missing /HemingResume/assets/"; exit 1; }
-          echo "OK: build has correct base."
+          # 检查 base 路径是否正确
+          if grep -q '/HemingResume/assets/' dist/index.html; then
+            echo "✅ base 路径正确"
+          else
+            echo "❌ 错误: 未找到 /HemingResume/assets/ 路径"
+            exit 1
+          fi
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: ./dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          force_orphan: true

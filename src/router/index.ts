@@ -17,8 +17,9 @@ const routes: Array<RouteRecordRaw> = [
   },
 ]
 
+const base = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : ''
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(base),
   routes,
 })
 

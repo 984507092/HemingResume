@@ -2,9 +2,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
+// CI 部署时通过 env BASE_PATH 传入，如 /HemingResume/；本地默认相对路径
+const base = process.env.BASE_PATH ?? './'
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base,
   plugins: [vue()],
   resolve: {
     alias: {
