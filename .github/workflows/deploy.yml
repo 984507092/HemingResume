@@ -7,8 +7,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# 需要 contents: write 才能推送到 gh-pages 分支
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
