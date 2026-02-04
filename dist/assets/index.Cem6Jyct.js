@@ -3,11 +3,11 @@ const __vite__mapDeps = (
   m = __vite__mapDeps,
   d = m.f ||
     (m.f = [
-      './index.r9c8mTV6.js',
-      './educational.XE4rRfGC.js',
+      './index.BmUCIZ-a.js',
+      './educational.B89NnOwD.js',
       './educational.C1b2MjXg.css',
       './index.BJbYSw9h.css',
-      './index.W93CM3uL.js',
+      './index.BcKL_EYX.js',
       './index.h3fyQTBv.css',
     ]),
 ) => i.map((i) => d[i])
@@ -5043,18 +5043,18 @@ function Pf(e) {
   return ut
 }
 const Tf = [
-    { path: '/', redirect: '/template2' },
+    { path: '', redirect: '/template2' },
     {
       path: '/template1',
       name: 'Template1',
       component: () =>
-        rr(() => import('./index.r9c8mTV6.js'), __vite__mapDeps([0, 1, 2, 3]), import.meta.url),
+        rr(() => import('./index.BmUCIZ-a.js'), __vite__mapDeps([0, 1, 2, 3]), import.meta.url),
     },
     {
       path: '/template2',
       name: 'Template2',
       component: () =>
-        rr(() => import('./index.W93CM3uL.js'), __vite__mapDeps([4, 1, 2, 5]), import.meta.url),
+        rr(() => import('./index.BcKL_EYX.js'), __vite__mapDeps([4, 1, 2, 5]), import.meta.url),
     },
   ],
   If = './',
