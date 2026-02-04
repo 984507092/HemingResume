@@ -2,12 +2,20 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]  # 你的开发分支
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -27,7 +35,6 @@ jobs:
       - name: Build
         run: pnpm run build
         env:
-          # 与仓库名一致，GitHub Pages 访问路径为 https://<user>.github.io/HemingResume/
           BASE_PATH: '/HemingResume/'
 
       - name: Verify build output
@@ -35,11 +42,18 @@ jobs:
           echo "=== dist/index.html script/src ==="
           grep -E 'src=|href=.*\.(js|css)' dist/index.html || true
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: heming
-          # 每次用 dist 内容完全覆盖分支，避免残留源码导致白屏
-          force_orphan: true
+          path: ./dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
