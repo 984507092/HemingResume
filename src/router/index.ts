@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '',
     redirect: '/template2',
   },
   {
@@ -17,9 +17,10 @@ const routes: Array<RouteRecordRaw> = [
   },
 ]
 
+// 与 vite base 一致：相对路径 ./ 或绝对 /HemingResume/；GitHub Pages 无 SPA 回退，用 Hash 模式
 const base = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : ''
 const router = createRouter({
-  history: createWebHistory(base),
+  history: createWebHashHistory(base),
   routes,
 })
 
