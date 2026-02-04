@@ -3,7 +3,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [heming]
+    branches: [main]
+  workflow_dispatch: # 支持在 Actions 页手动运行一次
 
 permissions:
   contents: read
@@ -68,3 +69,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deployment summary
+        run: |
+          echo "Deployed by workflow 'Deploy to GitHub Pages' (main branch)."
+          echo "If the site still shows /src/main.ts 404, set Settings -> Pages -> Source to 'GitHub Actions'."
