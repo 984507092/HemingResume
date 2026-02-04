@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -19,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
 
 const base = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : ''
 const router = createRouter({
-  history: createWebHashHistory(base),
+  history: createWebHistory(base),
   routes,
 })
 
