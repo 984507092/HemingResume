@@ -9,7 +9,7 @@
         </div>
         <div class="sub-info">
           <span class="major">计算机科学与技术</span>
-          <span class="time">2025.09 ~ 2027.06</span>
+          <span class="time">2025.03 ~ 2027.06</span>
         </div>
       </div>
       <div class="edu-item">
@@ -27,75 +27,75 @@
 </template>
 
 <style lang="scss" scoped>
-.educational {
-  padding-top: 28px;
-  page-break-inside: auto;
+  .educational {
+    padding-top: 28px;
+    page-break-inside: auto;
 
-  .title {
-    font-size: 24px;
-    margin-bottom: 18px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #3498db;
-    color: #2c3e50;
-    font-weight: 600;
+    .title {
+      font-size: 24px;
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #3498db;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .edu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .edu-item {
+      display: flex;
+      flex-direction: column;
+
+      .main-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+
+        .school {
+          font-size: 19.5px;
+          font-weight: 700;
+          color: #2c3e50;
+        }
+
+        .degree {
+          font-size: 16.5px;
+          color: #3498db;
+          font-weight: 600;
+          padding: 2px 8px;
+          background: rgba(52, 152, 219, 0.1);
+          border-radius: 4px;
+        }
+      }
+
+      .sub-info {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16.5px;
+        color: #7f8c8d;
+
+        .time {
+          font-size: 16.5px;
+          font-family: 'Consolas', monospace;
+        }
+      }
+    }
   }
 
-  .edu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .edu-item {
-    display: flex;
-    flex-direction: column;
+  @media print {
+    .edu-item {
+      break-inside: avoid;
+      page-break-inside: avoid;
+      margin-top: 20px;
+    }
 
     .main-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 4px;
-
-      .school {
-        font-size: 19.5px;
-        font-weight: 700;
-        color: #2c3e50;
-      }
-
-      .degree {
-        font-size: 16.5px;
-        color: #3498db;
-        font-weight: 600;
-        padding: 2px 8px;
-        background: rgba(52, 152, 219, 0.1);
-        border-radius: 4px;
-      }
-    }
-
-    .sub-info {
-      display: flex;
-      justify-content: space-between;
-      font-size: 16.5px;
-      color: #7f8c8d;
-
-      .time {
-        font-size: 16.5px;
-        font-family: 'Consolas', monospace;
-      }
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
   }
-}
-
-@media print {
-  .edu-item {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin-top: 20px;
-  }
-
-  .main-info {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-}
 </style>
